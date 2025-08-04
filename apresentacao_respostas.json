@@ -1,0 +1,15 @@
+[
+  {
+    "pergunta": "Como masterizar robô FANUC ?",
+    "resposta": "Para masterizar um robô FANUC, siga os seguintes passos:\n\n1. Movimente o robô para as marcas de calibração que estão no manipulador em cada um dos seus eixos.\n2. Selecione o menu: Menu > System.\n3. Se a opção Master/Cal estiver aparecendo na tela, pule para o passo 10.\n4. Se a opção Master/Cal não estiver habilitada, faça o seguinte:\n   - Selecione: Menu > System > Variables.\n   - Procure a variável de sistema `$MASTER_ENB` (opção 373).\n   - Mude o valor para “1” para que a opção Master/Cal fique ativa.\n5. Pressione F1 (Type) para selecionar a opção Master/Cal, ou repita o passo 2.\n6. Selecione a opção Master/Cal.\n7. Na tela System Master/Cal, selecione Zero position master e confirme em Yes.\n8. Após este procedimento, serão mostrados 6 valores que representam os novos valores de pulso dos encoders de cada eixo, que são a nova referência.\n9. Na mesma tela, selecione a opção Calibrate e confirme em Yes.\n10. Após este procedimento, serão mostrados 6 valores nulos, indicando que o valor atual em que os eixos estão é o novo zero.\n11. Pressione F5 (Done).\n\nLembre-se que, após a masterização, você deve verificar se não ocorrerá colisão do robô, pois ele assume novos valores de referência e pode haver mudança de posição nos pontos marcados anteriormente. \n\n Para mais informações, segue abaixo o procedimento técnico completo elaborado pela Stihl para a realização desta tarefa.",
+    "fonte": "",
+    "procedimento": "Procedimento_masterização_software_robo_fanuc.pdf"
+  },
+  {
+    "pergunta": "Alarme BZAL",
+    "resposta": "O alarme **BZAL (SRVO-062)** ocorre quando a bateria de segurança de posição absoluta do codificador de pulso está vazia. As causas prováveis incluem um cabo de bateria quebrado ou a ausência da bateria no robô.\n\nA ação recomendada é verificar a bateria ou o cabo da bateria e, se necessário, substituir a bateria. Em seguida, deve-se ajustar a variável do sistema `$MCR.$SPC_RESET` para `TRUE` (verdadeiro) e suprir a força novamente.\n\nApós isso, o robô deve ser masterizado ou seguir o procedimento de recuperação relacionado.",
+    "fonte": "falhas.pdf, página: 43",
+    "procedimento": ""
+  }
+]
+
