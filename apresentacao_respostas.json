@@ -10,6 +10,103 @@
     "resposta": "O alarme **BZAL (SRVO-062)** ocorre quando a bateria de segurança de posição absoluta do codificador de pulso está vazia. As causas prováveis incluem um cabo de bateria quebrado ou a ausência da bateria no robô.\n\nA ação recomendada é verificar a bateria ou o cabo da bateria e, se necessário, substituir a bateria. Em seguida, deve-se ajustar a variável do sistema `$MCR.$SPC_RESET` para `TRUE` (verdadeiro) e suprir a força novamente.\n\nApós isso, o robô deve ser masterizado ou seguir o procedimento de recuperação relacionado.",
     "fonte": "falhas.pdf, página: 43",
     "procedimento": ""
-  }
+  },
+  {
+    "pergunta": "Alarme BLAL",
+    "resposta": "O alarme BLAL (Grupo: i, Eixo: j) é emitido quando a voltagem da bateria para o codificador de pulso é mais baixa do que a nominal. Quando este alarme ocorre, a ação recomendada é substituir a bateria. É importante agir rapidamente para evitar que, devido ao atraso na substituição, o alarme BZAL seja detectado, o que indicaria a perda dos dados de posição, tornando necessária a masterização.",
+    "fonte": "Falhas.pdf, página: 43",
+    "procedimento": ""
+  },
+  {  
+    "pergunta": "Alarmes de pulso não estabelecido robô fanuc",  
+    "resposta": "Os alarmes relacionados ao \"pulso não estabelecido\" em robôs Fanuc envolvem as seguintes situações:\n\n1. **SRVO-075 Pulso não estabelecido (Grupo: i, Eixo: j)**:\n   - **Explicação**: A posição absoluta do codificador de pulso não pode ser estabelecida.\n   - **Ação**: Restaurar o alarme e movimentar manualmente o eixo no qual o alarme ocorreu até que o alarme não ocorra novamente. É necessário mover manualmente em uma rotação do motor.\n\n2. **SRVO-097 Pulso não estabelecido (Codificador: i)**:\n   - **Explicação**: A posição absoluta do codificador de pulso não pode ser estabelecida.\n   - **Ação**: Restaurar o alarme e mover manualmente o eixo no qual o alarme ocorreu até que o alarme não apareça novamente. Assim como o anterior, é necessário mover manualmente em uma rotação do motor.\n\nEsses alarmes indicam um problema no reconhecimento da posição do codificador de pulso, e a solução envolve a realização de uma movimentação manual para restabelecer o funcionamento correto.",  
+    "fonte": "Documento Falhas.pdf, página: 49",
+    "procedimento":""  
+  },
+  {
+      "pergunta": "Como resetar pulse coder robô FANUC",
+      "resposta": "Para resetar o alarme de Pulser Coder (RES PCA) do robô FANUC, siga o procedimento abaixo:\n\n1. Selecione: Menu > System > Master/Cal.\n2. Caso a opção Master/Cal não esteja habilitada, siga os passos do item 14.1, que vai do passo 6 ao 10.\n3. Na tela System Master/Cal, pressione F3 (RES_PCA).\n4. Confirme em Yes.\n\nSe o controlador apresentar a falha “Pulse Not Established”, é necessário movimentar o eixo do manipulador por mais de +/- 25 graus e repetir o comando RES_PCA conforme os passos descritos acima.",
+      "fonte": "mecanica.pdf, página: 62",
+      "procedimento": ""
+  },
+  {
+      "pergunta": "Como calibrar os eixos do ABB depois de trocar a placa SMB ?",
+      "resposta": "O PDF \"Procedimento_calibração_ABB.pdf\" detalha como calibrar os eixos de robôs ABB após falhas na placa SMB ou semelhantes, que causam a perda de referência dos eixos.\n\nO documento descreve os seguintes passos:\n\n- **Preparação**: Posicionar o seletor no painel elétrico para a posição manual e fechar janelas abertas.\n    Movimentação dos Eixos: Movimentar cada eixo para suas marcas demarcadas, usando movimento eixo-a-eixo separadamente.\n- **Calibração via Flex Pendent:**\n        Acessar o menu principal \"ABB\" e abrir a janela \"Calibração\".\n        Clicar na mensagem \"Contador de rotações não atualizado\" e depois em \"Atualização do contador de rotações\".\n        Confirmar a atualização dos contadores de rotações.\n        Selecionar os eixos a serem calibrados (identificados por um flag verde) e clicar em \"ATUALIZAR\".\n        Aguardar o término do processo.\n- **Verificação:** Após a calibração, verificar se os eixos estão funcionando corretamente e se o robô retorna à posição de calibração \"zero\" (marcas mecânicas) ao chamar a rotina \"zero\".\n\nÉ importante seguir as instruções de segurança, como pressionar o botão \"Homem-morto\" e verificar a posição atual do robô para evitar colisões.",
+      "fonte": "",
+      "procedimento": "Procedimento_calibração_ABB.pdf"
+  },
+  {
+      "pergunta": "Como trocar a bateria da SMB?",
+      "resposta": "O procedimento para trocar a bateria da SMB varia um pouco entre os modelos IRB4600 e IRB4400, mas os passos gerais são\n\n- **Para IRB4600:**\n    1. Posicionar o seletor no painel elétrico para a posição manual.\n    2. Mover o robô para sua posição de calibração.\n    3. Desligar completamente o robô (fonte de alimentação elétrica, pressão hidráulica e pressão de ar) utilizando o desligamento correto pela (Menu ABB > Reiniciar > Desligar > OK).\n    4. Remover a tampa da bateria SMB, limpando-a de resíduos de metal antes de abrir.\n    5. Retirar a bateria SMB, desconectar o cabo e remover a bateria antiga.\n    6. Substituir pela bateria nova e reconectar o cabo.\n    7. Fechar o compartimento com os parafusos de fixação.\n    8. Religar o controlador (painel elétrico).\n    9. Recalibrar os eixos do robô\n\n- **Para IRB4400:**\n    1. Posicionar o seletor no painel elétrico para a posição manual e fechar janelas abertas.\n    2. Mover o robô para sua posição de calibração.\n    3. Desligar completamente o robô (fonte de alimentação elétrica, pressão hidráulica e pressão de ar) utilizando o desligamento correto pela TPU (Menu ABB > Reiniciar > Desligar > OK).\n    4. Remover a tampa traseira da base do robô.\n    5. Retirar a placa SMB de dentro da base do robô.\n    6. Desconectar a bateria antiga.\n    7. Conectar a bateria nova.\n    8. Fechar a tampa traseira.\n    9. Religar o controlador (painel elétrico).\n    10. Recalibrar os eixos do robô.",
+      "fonte": "", 
+      "procedimento": "Procedimento_troca_bateria_ABB.pdf"
+  },
+  {
+      "pergunta": "Como trocar redutor J6 robô FANUC",
+      "resposta": "Este documento detalha o procedimento para a substituição do Redutor J6 em robôs FANUC modelo M10iA/10MS. É fundamental que o robô esteja **desligado** durante toda a atividade.\n\n#### Passos para a Substituição:\n\n1.  **Desligar a Alimentação:**\n    *   Desligue a alimentação do controlador do robô.\n\n2.  **Remover a Unidade do Redutor e Motor:**\n    *   Remova os seis parafusos que fixam a unidade onde o redutor (1) e o motor (12) estão conectados.\n    *   Após a remoção dos parafusos, retire cuidadosamente essa unidade.\n\n3.  **Remover o Redutor:**\n    *   Remova os parafusos que fixam o redutor (1) e, em seguida, retire-o da unidade.\n\n4.  **Remover Componentes Adicionais:**\n    *   Retire o parafuso (2) e a arruela (3).\n    *   Em seguida, remova o gerador de ondas (4).\n\n5.  **Remover Componentes do Motor:**\n    *   Remova os parafusos de montagem do motor (13).\n    *   Posteriormente, retire o adaptador (7), a junta (9), o componente (10) e a chave (11).\n\n6.  **Substituição e Montagem:**\n    *   Substitua o redutor, o motor, o O-ring e a junta por peças novas, conforme a necessidade.\n    *   Monte todos os componentes seguindo os passos anteriores na ordem inversa.\n    *   **Aplicação de LOCTITE:** Durante a montagem, aplique LOCTITE 675 na chave (11).\n\n7.  **Abastecimento de Graxa:**\n    *   Abasteça o redutor do eixo J6 com a graxa especificada: **HARMONIC GREASE 4B NO.2-0,5KG A98L-0040-0230/0.5KG**.\n\n8.  **Masterização:**\n    *   Após a conclusão da montagem, realize a **Masterização SINGLE AXIS MASTERING** consultando o Manual do Operador específico do robô para obter as instruções detalhadas.",
+      "fonte": "",
+      "procedimento": "Procedimento_Troca de Redutor J6.pdf"
+  },
+  {
+      "pergunta": "Resetar falha de sistema AAB",
+      "resposta": "Para resetar uma Falha de Sistema ABB, você deve seguir os seguintes passos recomendados:\n\n1. Tente reiniciar o sistema utilizando o interruptor de energia da rede elétrica (reboot do sistema).\n2. Verifique se existem outras mensagens no registro de eventos (eventlog) do hardware para identificar possíveis causas adicionais da falha.\n3. Caso a reinicialização não resolva o problema, é importante analisar o tipo específico da falha conforme descrito nas mensagens de erro para agir adequadamente.\n\nPor exemplo, na ocorrência de falha relacionada à inicialização de uma unidade acionadora, o procedimento inicial é reiniciar o sistema com a energia.\n\nAlém disso, pode ser necessário:\n\n1. Conferir os cabeamentos e conexões das unidades.\n2. Consultar os LEDs indicativos para identificar unidades com defeito.\n3. Contatar o suporte técnico da ABB caso seja uma falha de software ou hardware persistente.\nEstas ações são recomendadas para superar o estado de Falha do Sistema e permitir a retomada da operação normal.",
+      "fonte": "",
+      "procedimento": "IRC5 Solução de Problemas.pdf, página: 178"
+  },
+  {
+      "pergunta": "Freios do robô ABB não liberam. O que verificar primeiro",
+      "resposta": "Quando os freios do robô ABB não liberam, a primeira verificação a ser feita é se o contator de freio (K44) está funcionando corretamente. Além disso, é importante confirmar que o sistema está no estado \"Motores ON\" e que a voltagem de alimentação de 24V para o freio não está perdida. Também deve-se considerar se há defeito no freio do eixo do robô.",
+      "fonte": "IRC5 Solução de Problemas.pdf, página: 57",
+      "procedimento": ""
+  },
+  {
+      "pergunta": "Tensão muito baixa do barramento CC",
+      "resposta": "O erro \"Tensão muito baixa do barramento CC\" corresponde ao código 50022. Esse erro ocorre quando as unidades acionadoras não conseguem detectar a tensão do barramento CC, ou quando a tensão está baixa demais. Isso pode acontecer se a barra coletora do barramento CC não foi inserida corretamente entre a unidade acionadora e o retificador ou se os contatores da rede elétrica não estão fechando adequadamente.\n\nAs ações recomendadas para resolver esse problema são:\n\nVerificar se a barra coletora do barramento CC foi inserida corretamente entre a unidade acionadora e o retificador.\nVerificar se os motores nos contatores estão fechados.\nConfirmar se há tensão no lado conectado ao retificador.",
+      "fonte": "IRC5 Solução de Problemas.pdf, página: 307", 
+      "procedimento": ""
+  }, 
+  {
+      "pergunta": "Como ver falhas registradas no log da TP ABB",
+      "resposta": "Para ver as falhas registradas no log da TP ABB no controlador IRC5, siga as orientações a seguir baseadas no manual de solução de problemas:\n\n1. Utilize o log de eventos do sistema para consultar as mensagens de erro registradas. No log, cada evento de erro tem uma descrição e um código específico, que permite identificar o tipo da falha.\n\n2. No caso de uma falha, o sistema pode passar para alguns estados específicos como SYS STOP, SYS HALT ou SYS FAIL que indicam que o robô parou por erro. Nestes casos, consulte as mensagens do log que ocorreram na mesma hora para compreender a causa real do problema.\n\n3. Para isolar a falha, observe os sintomas e examine as mensagens de log, separando o sintoma original dos efeitos decorrentes.\n\n4. Para registrar formalmente um erro (por exemplo para suporte ABB), é possível criar um arquivo de diagnóstico que inclui o registro de eventos, backup do sistema e informações internas. Na TP ABB acesse: ABB → Painel de controle → Diagnóstico, escolha a pasta e nome do arquivo e confirme. O arquivo pode ser salvo na memória interna ou externa.\n\n5. O manual traz exemplos de códigos de erro que aparecem no log e orientações sobre o que fazer em cada caso. Por exemplo, 20170 indica \"O sistema foi interrompido\" e recomenda consultar as mensagens do log da mesma hora, corrigir a causa da falha e reiniciar o programa.\n\nResumindo: a visualização das falhas é feita pelo log de eventos acessível da TP, onde se encontram as mensagens de erro detalhadas. Para reunir estas informações, pode-se criar um arquivo diagnóstico na tela de diagnóstico da TP, que auxilia no suporte técnico.",
+      "fonte": "IRC5 Solução de Problemas.pdf, página: 30", 
+      "procedimento": ""
+  }, 
+  {
+      "pergunta": "Erro do resolvedor",
+      "resposta": "Os erros do resolvedor descritos no documento referem-se a problemas com o feedback do resolvedor utilizado na unidade de acionamento. Entre os erros comuns estão:\n\n- Erro de posição do resolvedor do servo (código 133315): ocorre quando há uma diferença muito grande em 3 posições consecutivas do rotor. Recomenda-se verificar o cabeamento do resolvedor, ruído externo e conexões de terra do resolvedor.\n- Erro do regulador de posição do servo (133334): **geralmente** causado por ruído no feedback do resolvedor. Recomenda-se verificar o cabeamento do resolvedor.\n- Estouro do regulador de velocidade do servo (133335): causado por ruído do resolvedor barulhento. Também recomenda-se verificar o cabeamento.\n- Estouro do ângulo de resolvedor do servo (133337): erro no cálculo do ângulo do resolvedor, recomendando-se verificar o resolver e o cabeamento.\n- Erro do resolvedor do servo (133338): falha no cálculo da raiz quadrada do ângulo do resolver, indicando resultados excedendo limites para os sinais x e y do resolver. Recomenda-se verificar o resolver, cabeamento e substituir as placas de medição seriais.\n- Erros relacionados à voltagem dos sinais do resolvedor, muito alta ou muito baixa, com recomendações para verificar o resolvedor, conexões, e substituir a placa de medição serial ou o próprio resolvedor, conforme códigos 38208 e 38209.\n- Falha na transmissão na comunicação da Placa de Medição Serial SMS (38210): recomenda reiniciar o sistema, verificar cabo e conectores, e substituir a placa de medição serial  se necessário.\n\nEm geral, para erros do resolvedor, as ações recomendadas são:\n\n1. Verificar o cabeamento do resolver quanto a ruído, conexões e integridade.\n2. Verificar e garantir as conexões de terra.\n3. Substituir a placa de medição serial se persistirem os erros.\n4. Substituir o resolvedor se necessário.\n5. Verificar configurações de SDI relacionadas.\n\nPortanto, a abordagem inicial para resolver problemas com erros do resolvedor inclui verificações físicas no cabeamento e conexões, seguido por possíveis substituições de placas e do próprio resolver se os problemas persistirem.",
+      "fonte": "IRC5 Solução de Problemas.pdf, páginas: 194", 
+      "procedimento": ""
+  },
+  { 
+    "pergunta": "Master/cal não aparece no menu robô FANUC", 
+    "resposta": "A TPU (Tech Pendant Unit) é a unidade de programação no robô Fanuc, que permite ao operador efetuar comandos em modo manual e automático, movimentar o robô, elaborar programas, manipular parâmetros e verificar o status do robô.\n\nQuando a TPU não conecta, podem ser tomadas as seguintes ações:\n\n1. Verificar se todos os cabos de conexão estão corretamente conectados.\n2. Substituir a unidade de TPU, caso o problema persista.\n3. Verificar se o sistema controlador está ligado e funcionando corretamente.\n4. Checar se há algum bloqueio físico ou um problema com a alimentação elétrica do dispositivo.\n\nEsse conjunto de ações pode ajudar a resolver problemas de conectividade da TPU.",  
+    "fonte": "eletrica.pdf, página: 51" ,
+    "procedimento": "" 
+  },
+  {
+  "pergunta": "Como carregar backup robô ABB",
+  "resposta": "O documento fornecido não contém um procedimento detalhado específico para o carregamento de backup do robô ABB. No entanto, há informações relacionadas a erros durante a etapa de backup, que indicam que o processo de backup envolve preparar, gravar e carregar módulos e arquivos do sistema.\n\nPara carregar um backup, é importante garantir que:\n\n* O sistema seja compatível com o backup (evitar incompatibilidade entre versões do sistema e do backup).\n* A unidade de backup tenha espaço disponível e que você possua acesso de gravação.\n* Os módulos de usuário estejam atualizados e compatíveis com a versão do RobotWare instalada.\n* Caso existam erros no backup (por exemplo, erro de gravação, mídia cheia, nomes de módulos muito longos), eles devem ser resolvidos antes de tentar carregar o backup.\n\nRecomendações gerais para backup e restauração, com base em erros mencionados no log, são:\n\n1. Certificar-se de que o dispositivo de armazenamento usado para backup esteja acessível, com permissão de gravação e espaço suficiente.\n2. Verificar a compatibilidade de versões (principalmente módulos de usuário).\n3. Para erros conhecidos, consultar as mensagens específicas do log para agir conforme indicado.\n4. Realizar o carregamento do backup e fazer um P-start do sistema para ativar as alterações.\n\nPara mais informações sobre backup e restauração, consulte o manual operacional do robô ABB ou scripts específicos de backup e restauração fornecidos pelo fabricante.",
+  "fonte": "IRC5 Solução de Problemas.pdf, página: 105",
+  "procedimento": ""
+  },
+  {
+    "pergunta": "TPU não conecta",
+    "resposta": "A TPU (Tech Pendant Unit) é a unidade de programação no robô Fanuc, que permite ao operador efetuar comandos em modo manual e automático, movimentar o robô, elaborar programas, manipular parâmetros e verificar o status do robô.\n\nQuando a TPU não conecta, podem ser tomadas as seguintes ações:\n\n1. Verificar se todos os cabos de conexão estão corretamente conectados.\n2. Substituir a unidade de TPU, caso o problema persista.\n3. Verificar se o sistema controlador está ligado e funcionando corretamente.\n4. Checar se há algum bloqueio físico ou um problema com a alimentação elétrica do dispositivo.\n\nEsse conjunto de ações pode ajudar a resolver problemas de conectividade da TPU.",
+    "fonte": "eletrica.pdf, página: 8",
+    "procedimento": ""
+  },
+  {
+    "pergunta": "Onde fica o resistor de frenagem do robô ABB",
+    "resposta": "O resistor de frenagem do robô ABB está associado ao módulo de acionamento do sistema. É importante verificar se os resistores purgadores (que são resistores de frenagem) têm o valor correto da resistência para essa configuração do módulo de acionamento e também confirmar se nenhum deles apresentou falha. Essas verificações são feitas para evitar problemas como a voltagem do link DC em estado crítico, que pode causar a parada da operação do robô.\n\nEmbora o documento não informe a localização física exata do resistor de frenagem, ele indica que os resistores purgadores fazem parte da configuração do módulo de acionamento e devem ser verificados em casos de falhas relacionadas ao freio e à frenagem brusca dos manipuladores.",
+    "fonte": "IRC5 Solução de Problemas.pdf, página: 204",
+    "procedimento": ""
+  },
+{  
+  "pergunta": "Falha de comunicação SMB",  
+  "resposta": "A falha de comunicação SMB (Placa de Medição Serial) é descrita no documento como um problema onde o Controlador de Segurança (SC) não consegue se comunicar com a SMB. Essa falha pode acarretar a desativação de toda supervisão de segurança no controlador, o que representa um risco para a segurança do sistema.\n\nCausas prováveis:\n\n- Cabo de conexão entre o Controlador de Segurança e a placa SMB mal conectado ou em conector incorreto.\n\nAções recomendadas para resolver a falha de comunicação SMB:\n\n1. Certificar-se de que o cabeamento entre o Controlador de Segurança e a Placa SMB esteja conectado no conector correto e funcional.\n2. Reiniciar o sistema para tentar restabelecer a comunicação.\n\nÉ importante realizar essas ações para evitar que o sistema entre em estado de parada ou falha por questões de segurança.",  
+  "fonte": "IRC5 Solução de Problemas.pdf, página: 150",  
+  "procedimento": ""
+}  
 ]
+
 
