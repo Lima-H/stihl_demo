@@ -3,7 +3,20 @@ from apresentacao_modelo import encontrar_melhor_resposta
 
 import uuid
 
-#adicionado agora
+# fix botões 
+st.markdown(
+    """
+    <style>
+    div[data-testid="stButton"] button {
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown("""
 <style>
   .robot-cards-row { margin: 0 0 1.25rem 0; }
@@ -202,14 +215,16 @@ with col_fanuc:
     fanuc_click = st.button(
         "Robô FANUC",
         key="btn_card_fanuc",
-        type="primary" if st.session_state.robo == 'FANUC' else "secondary"
+        type="primary" if st.session_state.robo == 'FANUC' else "secondary",
+        use_container_width=True
     )
 
 with col_abb:
     abb_click = st.button(
         "Robô ABB",
         key="btn_card_abb",
-        type="primary" if st.session_state.robo == 'ABB' else "secondary"
+        type="primary" if st.session_state.robo == 'ABB' else "secondary",
+        use_container_width=True
     )
 
 # Atualiza seleção conforme clique
