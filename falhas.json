@@ -1,0 +1,717 @@
+[
+    {
+      "codigo": "SRVO-001",
+      "resposta": "### Explicação\nÉ pressionado o botão de parada de emergência no painel do operador ou na caixa do operador.\n\nSe o alarme SYST-067 (de desconexão HSSB do painel) também for gerado ou se o LED (verde) na placa do painel estiver apagado, a comunicação entre o painel principal (JRS11) e a placa do painel (JRS11) é anormal. Os conectores do cabo entre a placa principal e a placa do painel podem estar soltos. Ou o cabo, a placa do painel ou a placa principal pode estar com defeito.\n\n### Ações a serem tomadas\n1. Liberar o botão de parada de emergência pressionado no painel do operador/caixa de operação.\n2. Verificar as conexões dos fios entre o botão de parada de emergência e o conector (CRM51) no painel de controle quanto à continuidade. Se for encontrado um fio aberto, substituir a fiação elétrica inteira.\n3. Com a parada de emergência na posição liberada, verificar a continuidade através dos terminais da chave. Se não for achada continuidade, o botão de parada de emergência está quebrado. Substituir a unidade da chave ou o painel do operador/caixa de operação.\n4. Substituir a placa do painel.\n5. Substituir a conexão do cabo entre a placa principal (JRS11) e a placa do painel (JRS11).\n6. Antes de executar a Ação 6, efetuar um completo backup (cópia de segurança) do controlador para salvar todos os seus programas e as configurações. Substituir a placa principal.",
+      "paginas": "25-26"
+    },
+    {
+      "codigo": "SRVO-002",
+      "resposta": "### Explicação\nO botão de parada de emergência no terminal de programação foi apertado.\n\n### Ações a serem tomadas\n1. Liberar o botão de parada de emergência no terminal de programação.\n2. Substituir o terminal de programação.",
+      "paginas": "27"
+    },
+    {
+      "codigo": "SRVO-003",
+      "resposta": "### Explicação\nO terminal de programação está ativado, mas a chave de homem morto não está apertada. A chave de homem morto é uma chave de três posições. Não pressionar a chave até a segunda posição “aberta”. A chave é ativada somente na posição média.\n\n### Ações a serem tomadas\n1. Pressionar a chave de homem morto para fazer o robô funcionar.\n2. Substituir o terminal de programação.",
+      "paginas": "27"
+    },
+    {
+      "codigo": "SRVO-004",
+      "resposta": "### Explicação\nNo bloco terminal TBOP4 da placa do painel, nenhuma conexão é feita entre 5 (EAS1) e 6 (EAS11) ou entre 7 (EAS2) e 8 (EAS21). Se for conectada uma cerca de segurança entre 5 (EAS1) e 6 (EAS11) ou entre 7 (EAS2) e 8 (EAS21), o portão da cerca de segurança será aberto.\n\nSe o alarme SYST-067 (de desconexão HSSB do painel) também for gerado ou se o LED (verde) na placa do painel estiver apagado, a comunicação entre a placa principal (JRS11) e a placa do painel (JRS11) será anormal. Os conectores do cabo entre a placa principal e a placa do painel podem estar soltos. Ou, o cabo, a placa do painel ou a placa principal pode estar com defeito.\n\n### Ações a serem tomadas\n**No caso em que o LED RDY (verde) estiver aceso:**\n1. Se uma cerca de segurança estiver conectada, fechar o portão.\n2. Verificar a chave e o cabo conectado a 5 (EAS1) e a 6 (EAS11) ou a 7 (EAS2) e a 8 (EAS21) no TBOP4.\n3. Quando o sinal não for usado, fazer uma conexão entre 5 (EAS1) e 6 (EAS11) ou entre 7 (EAS2) e 8 (EAS21).\n4. Substituir a placa do painel.\n\n**No caso em que o LED RDY (verde) não estiver aceso:**\n1. Verificar se o fusível FUSE1 na placa do painel está queimado. Se FUSE1 estiver queimado, substituir FUSE1 depois de remover a causa. Além disso, verificar a voltagem de EXT24V e EXT0V (TBOP6). Se 24V, 0V externos não forem usados verificar os pinos em ponte entre EXT24V e INT24V, EXT0V e INT0V (TBOP6).\n2. Substituir a placa do painel.\n3. Substituir o cabo de conexão entre a placa principal (JRS11) e a placa do painel (JRS11).\n4. Antes de executar a Ação 4, efetuar um backup completo do controlador para salvar todos os programas e configurações. Substituir a placa principal.",
+      "paginas": "28-30"
+    },
+    {
+      "codigo": "SRVO-005",
+      "resposta": "### Explicação\nO robô se moveu além de uma chave limite sobre os eixos. Ela é colocada na fábrica no estado de overtravel para fins de embalagem. Se o sinal de overtravel não estiver em uso, ele pode ter sido desativado por curto-circuito na unidade mecânica.\n\n### Ações a serem tomadas\n1. 1) Selecionar [liberação de OT do sistema] na tela de liberação de overtravel para liberar cada eixo do estado de overtravel. 2) Manter apertada a tecla shift e pressionar o botão de liberação do alarme para restaurar a condição de alarme. 3) Manter ainda apertada a tecla shift e mover manualmente para trazer todos os eixos para a faixa móvel.\n2. Substituir a chave limite.\n3. Verificar o fusível FS2 no servo-amplificador. Se o alarme Fusível SRVO-214 queimado for também gerado, o fusível FS2 queimou.\n4. Verificar o conector da ferramenta.\n5. Substituir o servo-amplificador.\n6. Verificar o seguinte para o conector RP1 na base do robô: 1) Não há pinos curvos ou deslocados nos conectores machos e fêmeas. 2) O conector está firmemente conectado. Em seguida verificar se os conectores CRF7 e CRM68 no servo-amplificador estão firmemente conectados. Verificar também se o cabo RP1 está em boa condição e se não há cortes ou torções visíveis. Se nenhuma chave limite estiver em uso, o conector em ponte deve estar preso na unidade mecânica. Verificar o conector em ponte.",
+      "paginas": "31-32"
+    },
+    {
+      "codigo": "SRVO-006",
+      "resposta": "### Explicação\nA joint de segurança (se em uso) poderia ter sido interrompida. Alternativamente, o sinal HBK no cabo de conexão do robô poderia ser uma falha de aterramento ou uma desconexão de cabo. Se um sinal de Hand broken não estiver em uso, ele pode ser desativado por configuração de software. Consultar a subseção 5.5.3 na parte III, “Conexões” ou “Manual de Manutenção” para saber como desativar o sinal de Hand broken.\n\n### Ações a serem tomadas\n1. Manter apertada a tecla shift e pressionar o botão de liberação do alarme para restaurar a condição de alarme. Ainda mantida apertada a tecla shift, mover manualmente a ferramenta para a área de trabalho. 1) Substituir a joint (articulação) de segurança. 2) Verificar o cabo da joint de segurança.\n2. Verificar o fusível FS2 no servo-amplificador. Se o alarme de fusível queimado SRVO-214 também for gerado, o fusível FS2 queimou.\n3. Substituir o servo-amplificador.\n4. Verificar o seguinte para o conector RP1 na base do robô: 1) Não há pinos curvos ou deslocados nos conectores machos e fêmeas. 2) O conector está conectado firmemente. Em seguida verificar se o conector CRF7 no servo-amplificador está conectado firmemente. Verificar também se o cabo RP1 está em boa condição e não há cortes ou torções visíveis. Verificar o cabo (RP1) de conexão do robô quanto a uma falha de aterramento ou uma desconexão.",
+      "paginas": "33-34"
+    },
+    {
+      "codigo": "SRVO-007",
+      "resposta": "### Explicação\nNo bloco terminal TBOP4 da placa do painel, nenhuma conexão é feita entre 1 (EES1) e 2 (EES11) ou entre 3 (EES2) e 4 (EES21). Se uma chave de parada de emergência externa for conectada entre 1 (EES1) e 2 (EES11) ou entre 3 (EES2) e 4 (EES21), a chave será pressionada.\n\nSe o alarme SYST-067 (de desconexão HSSB do painel) for também gerado ou se o LED (verde) na placa do painel se apagar, a comunicação entre a placa principal (JRS11) e a placa do painel (JRS11) é anormal. Os conectores do cabo entre a placa principal e a placa do painel podem estar soltos. Ou o cabo, a placa do painel ou a placa principal pode estar com defeito.\n\n### Ações a serem tomadas\n**No caso em que o LED RDY (verde) estiver aceso:**\n1. Se estiver conectada uma chave de parada de emergência externa, liberará a chave.\n2. Verificar a chave e o cabo conectado a 1 (EES1) – 2 (EES11), 3 (EES2) – 4 (EES21) no TBOP4.\n3. Quando este sinal não for usado, fazer uma conexão entre 1 (EES1) e 2 (EES11) ou 3 (EES2) e 4 (EES21).\n4. Substituir a placa do painel.\n\n**No caso em que o LED RDY (verde) não estiver aceso:**\n1. Verificar se FUSE1 na placa do painel está queimado. Se FUSE1 estiver queimado substituir FUSE1 depois de remover a causa. Além disso, verificar a voltagem de EXT24V e EXT0V (TBOP6). Se 24V, 0V externos não forem usados verificar os pinos em ponte entre EXT24V e INT24V, EXT0V e INT0V (TBOP6).\n2. Substituir a placa do painel.\n3. Substituir a conexão do cabo entre a placa principal (JRS11) e a placa do painel (JRS11).\n4. Antes de executar a Ação 4, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.",
+      "paginas": "35-37"
+    },
+    {
+      "codigo": "SRVO-009",
+      "resposta": "### Explicação\nFoi detectada uma pressão de ar anormal. O sinal de entrada está localizado na ferramenta do robô. Consultar o manual do seu robô.\n\n### Ações a serem tomadas\n1. Se for detectada uma pressão de ar anormal, verificar a causa.\n2. Verificar o conector da ferramenta.\n3. Verificar o seguinte para o conector RP1 na base do robô: 1) Não há pinos curvados nem deslocados nos conectores machos e fêmeas. 2) O conector está conectado firmemente. Em seguida verificar se o conector CRF7 no servo-amplificador está firmemente conectado. Verificar também se o cabo RP1 está em boa condição e se não há cortes ou torções visíveis. Verificar o cabo (RP1) de conexão do robô quanto a uma falha de aterramento ou uma desconexão.\n4. Substituir o servo-amplificador.\n5. Substituir os cabos internos do robô.",
+      "paginas": "38"
+    },
+    {
+      "codigo": "SRVO-014",
+      "resposta": "### Explicação\nUm motor de ventilador na unidade backplane está anormal.\n\n### Ações a serem tomadas\n1. Verificar se o motor do ventilador e seus cabos. Substituí-los se necessário.\n2. Substituir a unidade backplane.",
+      "paginas": "39"
+    },
+    {
+      "codigo": "SRVO-015",
+      "resposta": "### Explicação\nA temperatura na unidade de controle excede o valor especificado.\n\n### Ações a serem tomadas\n1. Se a temperatura ambiente for mais alta do que a especificada (45°C), baixar a temperatura ambiente.\n2. Se o motor do ventilador não estiver funcionando, verificá-lo e verificar os seus cabos. Substituir se necessário.\n3. Antes de executar a Ação 3, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.",
+      "paginas": "40"
+    },
+    {
+      "codigo": "SRVO-018",
+      "resposta": "### Explicação\nÉ detectada uma excessiva corrente de freio. O LED ALM no servo-amplificador está aceso.\n\n### Ações a serem tomadas\n1. Verificar o cabo (RM1) de conexão do robô e os cabos internos à seção do mecanismo quanto a curto circuito e quanto a aterramento.\n2. Este alarme pode ocorrer se o conector do freio não estiver preso. Certificar-se de que o conector CRR64 está preso firmemente ao servo-amplificador.\n3. Substituir o servo amplificador.",
+      "paginas": "41"
+    },
+    {
+      "codigo": "SRVO-021",
+      "resposta": "### Explicação\nO HRDY está ligado e o SRDY está desligado, embora não haja outra causa para o alarme. (HRDY é um sinal com o qual o computador principal detecta o servo-sistema ao ligar ou desligar o contator magnético do servo-amplificador. SRDY é um sinal com o qual o servo-sistema informa ao computador principal se o contator magnético está ligado.) Se o contator magnético do servo-amplificador não puder ser ligado quando controlado assim, é mais provável que tenha ocorrido um alarme no servo-amplificador. Se for detectado um alarme no servo-amplificador, o computador principal não emitirá este alarme (SRDY desligado). Por este motivo, este alarme indica que o contator magnético não pode ser ligado por razão desconhecida.\n\n### Ações a serem tomadas\n1. Certificar-se de que os conectores CP2, CRM64 e CNMC3 estejam firmemente presos à unidade de parada de emergência e o conector CRM64 ao servo-amplificador.\n2. É possível que uma desconexão momentânea da fonte de energia cause este alarme. Verificar se ocorreu uma desconexão instantânea.\n3. Substituir o servo-amplificador.\n4. Substituir a unidade de parada de emergência.",
+      "paginas": "42"
+    },
+    {
+      "codigo": "SRVO-022",
+      "resposta": "### Explicação\nQuando o HRDY está para ser ligado, o SRDY já está ligado. (HRDY é um sinal com o qual o computador principal controla o servo-sistema para ligar ou desligar o contator magnético do servo-amplificador. SRDY é um sinal com o qual o servo-sistema informa ao computador principal se o contator magnético está ligado).\n\n### Ações a serem tomadas\n1. Substituir o servo-amplificador.",
+      "paginas": "43"
+    },
+    {
+      "codigo": "SRVO-023",
+      "resposta": "### Explicação\nQuando o servo pára, o erro de posição é anormalmente grande. Verificar se o freio é liberado através do som de estalido do freio ou da vibração.\n\n### Ações a serem tomadas\n**No caso em que o freio não é liberado:**\n1. Se o freio não for liberado, verificar a continuidade da linha de freio no cabo de conexão do robô e no cabo interno do robô.\n2. Se não for encontrada desconexão, substituir o servo-amplificador ou o servo-motor.\n\n**No caso em que o freio é liberado:**\n1. Verificar o obstáculo que perturba o movimento do robô.\n2. Certificar-se de que os conectores CNJ1A-CNJ6 estejam firmemente fixados ao servo-amplificador.\n3. Verificar a continuidade do cabo de força no cabo de conexão do robô.\n4. Verificar para ver se a carga é maior do que a nominal. Se for maior, reduzi-la para dentro da nominal. (Se a carga for grande demais, o torque necessário para aceleração/desaceleração se torna maior do que a capacidade do motor. Como resultado, o motor se torna incapaz de seguir o comando e é emitido um alarme.)\n5. Verificar se a voltagem de entrada para o controlador está dentro da voltagem nominal e se não está faltando alguma fase. E verificar se o ajuste do transformador está correto. Verificar cada voltagem de fase do conector CRR38A ou CRR38B da entrada de força trifásica (200V CA) para o servo-amplificador. Se for de 210V CA ou menos, verificar a voltagem da linha. (Se a entrada de voltagem para o servo-amplificador se tornar baixa, o torque de saída também se torna baixo. Como resultado, o motor pode tornar-se incapaz de seguir o comando, por isso possivelmente causando um alarme.)\n6. Substituir o servo-amplificador.\n7. Substituir o servo-motor de acordo com a mensagem do alarme.",
+      "paginas": "44"
+    },
+    {
+      "codigo": "SRVO-024",
+      "resposta": "### Explicação\nQuando o robô estiver funcionando, seu erro de posição é maior do que um valor especificado ($PARAM_GROUP.$MOVER_OFFST ou $PARAM_GROUP.$TRKERRLIM). É provável que o robô não possa seguir a velocidade especificada pelo programa.\n\n### Ações a serem tomadas\n1. Tomar a mesma ação que SRVO-23.",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-027",
+      "resposta": "### Explicação\nFoi feita uma tentativa de calibrar o robô, mas o ajuste necessário não tinha sido completado.\n\n### Ações a serem tomadas\n1. Masterizar o robô.",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-033",
+      "resposta": "### Explicação\nFoi feita uma tentativa de configurar um ponto de referência para ajuste simplificado, mas o robô não tinha sido calibrado.\n\n### Ações a serem tomadas\n1. Calibrar o robô.\n2. Fornecer energia.\n3. Configurar um ponto de referência de ajuste simplificado usando [Positioning] no menu de posicionamento.",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-034",
+      "resposta": "### Explicação\nFoi feita uma tentativa de efetuar ajuste simplificado, mas o ponto de referência não foi configurado.\n\n### Ações a serem tomadas\n1. Configurar um ponto de referência de ajuste simplificado no menu de posicionamento.",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-035",
+      "resposta": "### Explicação\nFoi especificado um valor mais alto do que a máxima velocidade do eixo ($PARAM_GROUP.$JNTVELLIM). Cada velocidade atual de eixo é fixada para a máxima velocidade.\n\n### Ações a serem tomadas\n(Nenhuma ação específica listada, apenas a explicação do comportamento.)",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-036",
+      "resposta": "### Explicação\nO robô não foi para a área efetiva ($PARAM_GROUP.$STOPTOL) mesmo depois que o tempo de monitoramento para verificar a posição ($PARAM_GROUP.$INPOS_TIME) expirou.\n\n### Ações a serem tomadas\n1. Tomar as mesmas ações que para SRVO-23 (erro grande de posição em uma parada).",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-037",
+      "resposta": "### Explicação\nFoi introduzido o sinal *IMSTP para uma interface de dispositivo periférico.\n\n### Ações a serem tomadas\n1. Ligar o sinal *IMSTP.",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-038",
+      "resposta": "### Explicação\nA contagem de pulso obtida quando a força é desligada não combina com a contagem de pulso obtida quando a força é aplicada. Este alarme é reafirmado depois de mudar o codificador de pulso ou a bateria de segurança para os dados do codificador de pulso ou quando carregar os dados de backup na placa principal. Verificar o histórico de alarme.\n\n### Ações a serem tomadas\n1. No caso com “Falta de amperagem SRVO-222 (Amp: i)”, ver a localização de defeito de SRVO-222.\n2. Se o número do freio estiver configurado para os motores que não são do freio, pode ocorrer o alarme. Verificar a configuração do software do número do freio.\n3. No caso do robô ter sido movido usando a unidade de liberação do freio enquanto a força estiver desligada ou quando restaurar os dados de backup para a placa principal, pode ocorrer este alarme. Remasterizar o robô.\n4. Se o robô foi movido porque o freio falhou, pode ocorrer este alarme. Verificar a causa do problema com o freio. Em seguida remasterizar o robô.\n5. Substituir o codificador de pulso e masterizar o robô.",
+      "paginas": "47"
+    },
+    {
+      "codigo": "SRVO-042",
+      "resposta": "### Explicação\nEste alarme significa que os contatos do contator magnético colaram. A condição de alarme ocorre se o contator magnético se desligar para estar já ligado quando for feita uma tentativa de ligá-lo. A condição de alarme é detectada entre o tempo que ocorre a colagem do contato e o tempo em que é feita uma tentativa de ligar o contator magnético.\n\n### Ações a serem tomadas\n1. Verificar o contator magnético e substituí-lo se necessário. Se os contatos do contator magnético colarem uns nos outros, desligar o disjuntor. Se a força for desligada sem desligar o disjuntor, o servo-amplificador pode ser avariado, porque os contatos colados mantêm os 200V CA trifásicos aplicados ao servo-amplificador.\n2. Substituir a unidade de parada de emergência.\n3. Substituir o servo-amplificador.",
+      "paginas": "47-48"
+    },
+    {
+      "codigo": "SRVO-043",
+      "resposta": "### Explicação\nA energia de descarga regenerativa era alta demais para ser dissipada como calor. (Para fazer o robô funcionar, o servo-amplificador fornece energia ao robô. Ao fazer descer o eixo vertical, o robô opera a partir da energia potencial. Se uma redução na energia potencial for mais alta do que a energia necessária para a aceleração, o servo-amplificador recebe energia do motor. Um fenômeno similar ocorre mesmo quando nenhuma gravidade for aplicada, por exemplo, na desaceleração em um eixo horizontal. A energia que o servo-amplificador recebe do motor é chamada de energia regenerativa. O servo-amplificador dissipa esta energia como calor. Se a energia regenerativa for maior do que a energia dissipada como calor, a diferença é armazenada no servo-amplificador, causando um alarme.)\n\n### Ações a serem tomadas\n1. Este alarme pode ocorrer se o eixo estiver sujeito a freqüente aceleração/desaceleração ou se o eixo for vertical e gerar uma grande quantidade de energia regenerativa. Se ocorrer este alarme, moderar as condições de serviço.\n2. Verificar o fusível FS3 no servo-amplificador. Se ele estiver queimado, remover a causa e substituir o fusível. Uma das causas prováveis de um fusível queimado é uma falha de aterramento no servo-amplificador para o eixo auxiliar.\n3. A temperatura ambiente é excessivamente alta. Ou o resistor regenerativo não pode ser resfriado efetivamente. Verificar a unidade do ventilador e substituí-la se ela parar. Limpar a unidade do ventilador, o resistor regenerativo e a abertura de ventilação se estiverem sujos.\n4. Certificar-se de que os conectores do servo-amplificador CRR63A, CRR63B e CRR63C estejam firmemente conectados. Em seguida destacar o cabo dos conectores CRR63A, CRR63B e CRR63C da placa de parada de emergência e verificar quanto à continuidade entre os pinos 1 e 2 do conector da extremidade do cabo. Se não houver continuidade entre os pinos, substituir o resistor regenerativo.\n5. Certificar-se de que os conectores do servo-amplificador CRR45A, CRR45B e CRR45C estejam conectados firmemente, em seguida destacar os cabos de CRR45A, CRR45B e CRR45C do servo-amplificador e verificar a resistência entre os pinos 1 e 2 de cada conector da extremidade do cabo. Se a resistência não for de 9-16Ω, substituir o resistor regenerativo. CRR45B e CRR45C não podem ser usados dependendo do modelo do robô.\n6. Substituir o servo-amplificador.",
+      "paginas": "48-50"
+    },
+    {
+      "codigo": "SRVO-044",
+      "resposta": "### Explicação\nA voltagem de CC (voltagem de ligação em CC) da alimentação do circuito principal está anormalmente alta.\n\n### Ações a serem tomadas\n1. Verificar a voltagem trifásica de entrada no servo-amplificador. Se for de 240V CA ou mais alta, verificar a voltagem de linha. (Se a voltagem trifásica de entrada for mais alta do que 240V CA, a alta aceleração/desaceleração pode resultar neste alarme.)\n2. Verificar se o peso da carga está dentro do nominal. Se for mais alto do que o nominal, reduzi-lo para dentro do nominal. (Se a carga da máquina for mais alta do que a nominal, o acúmulo de energia regenerativa poderá resultar no alarme HVAL mesmo quando a voltagem trifásica de entrada estiver dentro da nominal.)\n3. Substituir o servo-amplificador.",
+      "paginas": "51"
+    },
+    {
+      "codigo": "SRVO-045",
+      "resposta": "### Explicação\nCorrente anormalmente alta fluiu no circuito principal do servo-amplificador.\n\n### Ações a serem tomadas\n1. Desligar a força e desconectar o cabo de força do servo-amplificador indicado pela mensagem de alarme. (E desconectar o cabo do freio (CRR64 no servo-amplificador) para evitar que o eixo caia inesperadamente.) Suprir a força para ver se o alarme ocorre novamente. Se ocorrer de novo o alarme, substituir o servo-amplificador.\n2. Desligar a força e desconectar o cabo de força do servo-amplificador indicado pela mensagem de alarme e verificar o isolamento de suas linhas U, V, W e GND (terra) umas com as outras. Se houver um curto-circuito, substituir o cabo de força.\n3. Desligar a força e desconectar o cabo de força do servo-amplificador pela mensagem de alarme e medir a resistência entre U e V, V e W e W e U com um ohmímetro que tenha uma faixa de resistência muito baixa. Se as resistências nos três locais forem diferentes uns dos outros, o motor ou o cabo de força está defeituoso. Verificar cada item em detalhe e substituir se necessário.",
+      "paginas": "52"
+    },
+    {
+      "codigo": "SRVO-046",
+      "resposta": "### Explicação\nEste alarme é emitido para evitar que o motor sofra avaria térmica que possa ocorrer quando o valor médio quadrático calculado da corrente dentro do servo-sistema estiver fora da faixa admissível.\n\n### Ações a serem tomadas\n1. Verificar a condição de operação para o robô e moderar a condição de serviço se possível.\n2. Tomar as mesmas ações de SRVO-023.",
+      "paginas": "53"
+    },
+    {
+      "codigo": "SRVO-047",
+      "resposta": "### Explicação\nA voltagem de alimentação do controle (+5V, etc.) fornecida pelo circuito de alimentação no servo-amplificador é anormalmente baixa.\n\n### Ações a serem tomadas\n1. Substituir o servo-amplificador de acordo com a mensagem do alarme.\n2. Substituir a fonte de alimentação.",
+      "paginas": "56"
+    },
+    {
+      "codigo": "SRVO-049",
+      "resposta": "### Explicação\nO termostato no transformador funcionou. Alternativamente, o fusível F1 ou F2 no servo-amplificador queimou.\n\n### Ações a serem tomadas\n1. Verificar a condição de operação para o robô e moderar a condição de trabalho se possível. E verificar a unidade do ventilador e substituí-la se parar. Limpar a unidade do ventilador, o resistor regenerativo e a abertura de ventilação se estiverem sujos.\n2. Verificar fusível queimado (Amp) SRVO-214 que ocorre simultaneamente no histórico de alarme. Se ocorrer, substituir o servo-amplificador. Substituir os fusíveis F1 e F2 no servo-amplificador não resolve o problema.\n3. Certificar-se de que o conector CRM73 na unidade de parada de emergência e o conector TOH no transformador estejam firmemente conectados.\n4. Substituir o servo.\n5. Substituir o transformador.",
+      "paginas": "57-58"
+    },
+    {
+      "codigo": "SRVO-050",
+      "resposta": "### Explicação\nO torque de interferência estimado pelo servo-software é anormalmente alto. (Foi detectada uma colisão.)\n\n### Ações a serem tomadas\n1. Verificar a configuração do software para esta opção.\n2. Tomar as mesmas ações que SRVO-023.",
+      "paginas": "59"
+    },
+    {
+      "codigo": "SRVO-051",
+      "resposta": "### Explicação\nA compensação do valor de feedback da corrente é anormalmente alta.\n\n### Ações a serem tomadas\n1. Substituir o servo-amplificador.",
+      "paginas": "60"
+    },
+    {
+      "codigo": "SRVO-054",
+      "resposta": "### Explicação\nUm acesso ao servo-módulo de memória falha.\n\n### Ações a serem tomadas\n1. Substituir o cartão de controle de eixo na placa principal.",
+      "paginas": "61"
+    },
+    {
+      "codigo": "SRVO-055",
+      "resposta": "### Explicação\nOcorreu um erro de comunicação entre a placa principal e o servo-amplificador.\n\n### Ações a serem tomadas\n1. Verificar o cabo de comunicação (fibra óptica) entre a placa principal e o servo-amplificador. Substituí-lo se estiver defeituoso.\n2. Substituir o cartão de controle de eixo na placa principal.\n3. Substituir o servo-amplificador.",
+      "paginas": "62"
+    },
+    {
+      "codigo": "SRVO-056",
+      "resposta": "### Explicação\nOcorreu um erro de comunicação entre a placa principal e o servo-amplificador.\n\n### Ações a serem tomadas\n1. Tomar a mesma ação de SRVO-055.",
+      "paginas": "63"
+    },
+    {
+      "codigo": "SRVO-057",
+      "resposta": "### Explicação\nA comunicação entre a placa principal e o servo-amplificador foi interrompida.\n\n### Ações a serem tomadas\n1. Verificar se o fusível F3 na fonte de alimentação queimou.\n2. Verificar se o fusível FS1 no servo-amplificador queimou.\n3. Verificar o cabo de comunicação (fibra óptica) entre a placa principal e o servo-amplificador. Substituí-lo se estiver defeituoso.\n4. Substituir o cartão de controle de eixo na placa principal.\n5. Substituir o servo-amplificador.\n6. Verificar o cabo RP1 de conexão do robô (defeito de aterramento +5V).\n7. Antes de executar a Ação 7, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.",
+      "paginas": "63"
+    },
+    {
+      "codigo": "SRVO-058",
+      "resposta": "### Explicação\nA comunicação entre a placa principal e o servo-amplificador foi interrompida.\n\n### Ações a serem tomadas\n1. Verificar se o fusível F3 na fonte de alimentação queimou.\n2. Desligar a força e desconectar o conector CRF7 no servo-amplificador. Em seguida ligar a força e verificar se este alarme ocorre de novo. (Ignorar o alarme SRVO-068 devido à desconexão do conector CRF7.) Se este alarme não ocorrer, o cabo RP1 de conexão do robô ou o cabo interno do robô pode estar em curto-circuito com a terra. Verificar os cabos e substituí-los se necessário.\n3. Verificar se os LEDs (P5V e P3,3V) no servo-amplificador estão acesos. Se eles não estiverem acesos, não está sendo fornecido suprimento de força em CC ao servo-amplificador. Certificar-se de que os conectores CP6 e CRM67 na unidade de parada de emergência e o conector CRM67 no servo-amplificador estão firmemente conectados. Se eles estiverem conectados firmemente, substituir o servo-amplificador.\n4. Verificar o cabo de comunicação (fibra óptica) entre a placa principal e o servo-amplificador. Substituí-lo se estiver com defeito.\n5. Substituir o cartão de controle de eixo na placa principal.\n6. Substituir o servo-amplificador.\n7. Se as outras unidades (o servo-amplificador para o eixo auxiliar e a interface de rastreamento de linha) estiverem conectadas na comunicação óptica FSSB, desconectar estas unidades e conectar somente o servo-amplificador do canal 6 ao robô. Em seguida ligar a força. Se não ocorrer este alarme, procurar a unidade defeituosa e substituí-la.\n8. Antes de continuar para o próximo passo, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Deixar de efetuar isto poderá resultar em dano ao equipamento ou perda de dados. Substituir a placa principal.",
+      "paginas": "64-65"
+    },
+    {
+      "codigo": "SRVO-059",
+      "resposta": "### Explicação\nA inicialização do servo-amplificador falhou.\n\n### Ações a serem tomadas\n1. Verificar o cabo de comunicação (fibra óptica) entre a placa principal e o servo-amplificador. Substituí-lo se estiver com defeito.\n2. Substituir o servo-amplificador.",
+      "paginas": "66"
+    },
+    {
+      "codigo": "SRVO-060",
+      "resposta": "### Explicação\nA comunicação entre a placa do eixo adicional e o amplificador do eixo adicional foi interrompida.\n\n### Ações a serem tomadas\n1. Verificar se o cabo óptico entre a placa do eixo adicional e o amplificador do eixo adicional está firmemente conectado.\n2. Substituir a placa do eixo adicional.\n3. Substituir o amplificador do eixo adicional.\n4. Antes de executar a Ação 4, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.\n5. Substituir o backplane.",
+      "paginas": "66"
+    },
+    {
+      "codigo": "SRVO-062",
+      "resposta": "### Explicação\nEste alarme ocorrerá se a bateria de segurança de posição absoluta do codificador de pulso estiver vazia. A causa provável é um cabo de bateria quebrado ou sem bateria no robô.\n\n### Ações a serem tomadas\n1. Verificar a bateria ou o cabo da bateria e substituir a bateria. Em seguida ajustar a variável do sistema $MCR.$SPC_RESET para TRUE (verdadeiro) e suprir a força novamente. Depois disso, masterizar o robô ou seguir o PROCEDIMENTO DE RECUPERAÇÃO SRVO-038.",
+      "paginas": "67"
+    },
+    {
+      "codigo": "SRVO-064",
+      "resposta": "### Explicação\nEste alarme ocorrerá se a fase dos pulsos gerados no codificador de pulso for anormal.\n\n### Ações a serem tomadas\n1. Substituir o codificador de pulso.",
+      "paginas": "67"
+    },
+    {
+      "codigo": "SRVO-065",
+      "resposta": "### Explicação\nA voltagem da bateria para o codificador de pulso é mais baixa do que a nominal.\n\n### Ações a serem tomadas\n1. Substituir a bateria. (Se ocorrer este alarme, desligar a força CA e substituir a bateria logo que possível. Uma demora na substituição da bateria pode resultar que seja detectado pelo alarme BZAL. Neste caso, os dados de posição serão perdidos. Uma vez perdidos os dados de posição, a masterização se tornará necessária.)",
+      "paginas": "67"
+    },
+    {
+      "codigo": "SRVO-067",
+      "resposta": "### Explicação\nA temperatura dentro do codificador de pulso ou do motor está anormalmente alta e o termostato montado operou.\n\n### Ações a serem tomadas\n1. Verificar as condições de operação para o robô e moderar as condições de trabalho.\n2. Quando for fornecida energia ao motor depois de ele ficar suficientemente frio, se ainda ocorrer o alarme, substituir o motor.",
+      "paginas": "67"
+    },
+    {
+      "codigo": "SRVO-068",
+      "resposta": "### Explicação\nO codificador de pulso não retorna os dados em série em resposta a um sinal de solicitação.\n\n### Ações a serem tomadas\n1. Ver ações em SRVO-070.",
+      "paginas": "67"
+    },
+    {
+      "codigo": "SRVO-069",
+      "resposta": "### Explicação\nOs dados em série se desarranjam durante a comunicação.\n\n### Ações a serem tomadas\n1. Ver ações em SRVO-070.",
+      "paginas": "68"
+    },
+    {
+      "codigo": "SRVO-070",
+      "resposta": "### Explicação\nOs bits de partida e parada dos dados em série estão anormais.\n\n### Ações a serem tomadas\n1. Certificar-se de que o conector CRF7 no servo-amplificador está firmemente conectado.\n2. Verificar se a blindagem do cabo de interconexão do robô (para o codificador de pulso) e o cabo do equipamento periférico estão conectados firmemente à chapa de aterramento.\n3. Verificar se cada unidade está firmemente aterrada.\n4. Substituir o servo-amplificador.\n5. Substituir o codificador de pulso.\n6. Substituir o cabo de interconexão do robô (para o codificador de pulso).",
+      "paginas": "68"
+    },
+    {
+      "codigo": "SRVO-071",
+      "resposta": "### Explicação\nA velocidade de feedback está anormalmente alta.\n\n### Ações a serem tomadas\n1. Se este alarme ocorrer juntamente com o alarme PHAL (SRVO-064), este alarme não corresponderá à causa principal da falha.\n2. Substituir o codificador de pulso.",
+      "paginas": "68"
+    },
+    {
+      "codigo": "SRVO-072",
+      "resposta": "### Explicação\nÉ provável que o codificador de pulso esteja anormal.\n\n### Ações a serem tomadas\n1. Substituir o codificador de pulso e remasterizar o robô.",
+      "paginas": "69"
+    },
+    {
+      "codigo": "SRVO-073",
+      "resposta": "### Explicação\nÉ provável que o codificador de pulso esteja anormal ou o codificador de pulso funcionou mal devido ao ruído.\n\n### Ações a serem tomadas\n1. Reforçar a terra do flange do motor de acordo com a mensagem do alarme.\n2. Substituir o codificador de pulso e masterizar o robô.",
+      "paginas": "69"
+    },
+    {
+      "codigo": "SRVO-074",
+      "resposta": "### Explicação\nO LED no codificador de pulso está quebrado.\n\n### Ações a serem tomadas\n1. Substituir o codificador de pulso e remasterizar o robô.",
+      "paginas": "69"
+    },
+    {
+      "codigo": "SRVO-075",
+      "resposta": "### Explicação\nA posição absoluta do codificador de pulso não pode ser estabelecida.\n\n### Ações a serem tomadas\n1. Restaurar o alarme e movimentar manualmente o eixo no qual o alarme ocorreu até que o mesmo não ocorra de novo. (Movimentar manualmente de uma rotação do motor.)",
+      "paginas": "69"
+    },
+    {
+      "codigo": "SRVO-076",
+      "resposta": "### Explicação\nUm excessivo transtorno foi assumido no servo-software no início da operação. (Foi detectada uma carga anormal.)\n\n### Ações a serem tomadas\n1. Verificar se o robô colidiu com algum corpo estranho. Se ocorrer uma colisão, restaurar o sistema, em seguida mover manualmente o robô para evitar a colisão. Ou verificar se a carga de máquina do eixo correspondente aumentou.\n2. Verificar se são válidas as configurações de carga.\n3. Verificar se o freio do eixo correspondente está liberado.\n4. Verificar se o peso da carga está dentro da faixa nominal. Se o peso exceder o limite superior, reduzi-lo para o limite. (O uso do robô com uma carga excedendo o limite aplicado pode aumentar anormalmente o transtorno assumido, resultando neste alarme.)\n5. Verificar cada voltagem entre fases da entrada trifásica (200V CA) ao servo-amplificador. E verificar o ajuste do transformador.\n6. Substituir o servo-amplificador.\n7. Substituir o servo-motor correspondente.\n8. Substituir a unidade de parada de emergência.\n9. Substituir o cabo de força do cabo de conexão do robô no qual o eixo correspondente está conectado.\n10. Substituir o cabo de força de interconexão do robô no qual o eixo correspondente está conectado.",
+      "paginas": "70"
+    },
+    {
+      "codigo": "SRVO-081",
+      "resposta": "### Explicação\nO contador de pulso para rastreamento de linha estourou a capacidade.\n\n### Ações a serem tomadas\n1. Verificar se a condição do rastreamento de linha excede a limitação.\n2. Substituir o codificador de pulso.\n3. Substituir a placa I/F de rastreamento de linha.",
+      "paginas": "71"
+    },
+    {
+      "codigo": "SRVO-082",
+      "resposta": "### Explicação\nO codificador de pulso de rastreamento de linha não foi conectado.\n\n### Ações a serem tomadas\n1. Verificar o cabo de conexão em cada extremidade (a placa I/F de rastreamento de linha e o codificador de pulso).\n2. Verificar se a blindagem do cabo de conexão está firmemente conectada à chapa de aterramento.\n3. Substituir o cabo de rastreamento de linha.\n4. Substituir o codificador de pulso.\n5. Substituir a placa I/F de rastreamento de linha.",
+      "paginas": "71"
+    },
+    {
+      "codigo": "SRVO-084",
+      "resposta": "### Explicação\nEste alarme ocorrerá se a bateria de segurança para a posição absoluta do codificador de pulso não for conectada. Ver a descrição do alarme BZAL (SRVO-062).\n\n### Ações a serem tomadas\n1. Verificar a bateria e o cabo da bateria e substituir a bateria. Em seguida ajustar a variável do sistema $MCR.$SPC_RESET para TRUE (verdadeiro) e suprir a força novamente. Depois disto, masterizar o codificador de pulso.",
+      "paginas": "71"
+    },
+    {
+      "codigo": "SRVO-087",
+      "resposta": "### Explicação\nEste alarme ocorrerá se a voltagem da bateria de segurança para a posição absoluta do codificador de pulso for baixa. Ver a descrição do alarme BLAL (SRVO-065).\n\n### Ações a serem tomadas\n1. Substituir a bateria. (Se ocorrer este alarme, ligar a alimentação CA e substituir a bateria logo que possível. Uma demora na substituição da bateria poderá resultar na detecção do alarme BZAL. Neste caso, os dados de posição serão perdidos. Uma vez perdidos os dados de posição, a masterização se tornará necessária.)",
+      "paginas": "71"
+    },
+    {
+      "codigo": "SRVO-089",
+      "resposta": "### Explicação\nO motor se sobre-aqueceu. Ver a descrição do alarme OHAL2 (SRVO-067).\n\n### Ações a serem tomadas\n1. Verificar as condições de operação para o codificador de pulso.\n2. Quando for suprida força para o codificador de pulso depois que ele se tornou suficientemente frio, se ainda ocorrer o alarme, substituir o codificador de pulso.",
+      "paginas": "72"
+    },
+    {
+      "codigo": "SRVO-091",
+      "resposta": "### Explicação\nA comunicação entre o codificador de pulso e a placa de interface de rastreamento de linha está anormal. Ver a descrição do alarme CRCERR (SRVO-092).\n\n### Ações a serem tomadas\n(Nenhuma ação específica listada, apenas a referência a SRVO-092.)",
+      "paginas": "72"
+    },
+    {
+      "codigo": "SRVO-092",
+      "resposta": "### Explicação\nA comunicação entre o codificador de pulso e a placa de interface de rastreamento de linha está anormal.\n\n### Ações a serem tomadas\n1. Verificar o cabo de conexão em cada extremidade (a placa I/F de rastreamento de linha e o codificador de pulso).\n2. Verificar se a blindagem do cabo de conexão está firmemente conectada à chapa de aterramento.\n3. Substituir o cabo de rastreamento de linha.\n4. Substituir o codificador de pulso.\n5. Substituir a placa I/F de rastreamento de linha.",
+      "paginas": "72"
+    },
+    {
+      "codigo": "SRVO-093",
+      "resposta": "### Explicação\nEste alarme ocorrerá se os dados de posição correntes do codificador de pulso forem mais altos do que os dados da posição anterior.\n\n### Ações a serem tomadas\n1. Se ocorrer este alarme juntamente com o alarme PHAL (SRVO-086), este alarme não corresponderá à causa principal da falha.\n2. Substituir o codificador de pulso.\n3. Verificar o cabo de conexão em cada extremidade (a placa I/F de rastreamento de linha e o codificador de pulso).\n4. Verificar se a blindagem do cabo de conexão está conectada firmemente à chapa de aterramento.\n5. Substituir o cabo de rastreamento de linha.\n6. Substituir o codificador de pulso.\n7. Substituir a placa I/F de rastreamento de linha.",
+      "paginas": "72"
+    },
+    {
+      "codigo": "SRVO-094",
+      "resposta": "### Explicação\nÉ provável que o codificador de pulso esteja anormal.\n\n### Ações a serem tomadas\n1. Substituir o codificador de pulso.",
+      "paginas": "72"
+    },
+    {
+      "codigo": "SRVO-095",
+      "resposta": "### Explicação\nÉ provável que o codificador de pulso esteja anormal ou o codificador de pulso funcione mal devido ao ruído.\n\n### Ações a serem tomadas\n1. Reforçar o aterramento do flange do motor de acordo com a mensagem de alarme.\n2. Substituir o codificador de pulso e masterizar o robô.",
+      "paginas": "73"
+    },
+    {
+      "codigo": "SRVO-096",
+      "resposta": "### Explicação\nO LED no codificador de pulso está quebrado.\n\n### Ações a serem tomadas\n1. Substituir o codificador de pulso.",
+      "paginas": "73"
+    },
+    {
+      "codigo": "SRVO-097",
+      "resposta": "### Explicação\nA posição absoluta do codificador de pulso não pode ser estabelecida.\n\n### Ações a serem tomadas\n1. Restaurar o alarme e mover manualmente o eixo no qual o alarme ocorreu até que o mesmo não ocorra de novo. (Mover manualmente uma rotação do motor.)",
+      "paginas": "73"
+    },
+    {
+      "codigo": "SRVO-105",
+      "resposta": "### Explicação\nA porta do gabinete está aberta.\n\n### Ações a serem tomadas\n1. Quando a porta estiver aberta, fechá-la. Se não houver interruptor montado na porta, ir para (Ação 3).\n2. Verificar o interruptor da porta e o cabo de conexão do interruptor da porta. Se o interruptor ou o cabo estiver com defeito, substituí-lo.\n3. Verificar se os conectores CRM67, CRM70 e CRM71 na unidade de parada de emergência estão firmemente conectados.\n4. Substituir o terminal de programação.\n5. Substituir o cabo do terminal de programação.\n6. Substituir a chave de modo no painel do operador /caixa de operação. Ou substituir o painel do operador/caixa de operação.\n7. Substituir a unidade comutadora do painel no painel do operador/caixa de operação. Ou substituir o painel do operador/caixa de operação.\n8. Substituir a placa do painel.\n9. Substituir a unidade de parada de emergência.\n10. Substituir o servo-amplificador.\n11. Substituir o cabo de conexão entre a placa do painel e a unidade de parada de emergência.",
+      "paginas": "74"
+    },
+    {
+      "codigo": "SRVO-136",
+      "resposta": "### Explicação\nA corrente CC do servo-amplificador (voltagem de ligação CC) está anormalmente baixa.\n\n- Este alarme ocorreu durante a operação do robô.\n\n### Ações a serem tomadas\n1. Verificar se a voltagem de entrada para o controlador está dentro da voltagem nominal e que não esteja faltando alguma fase. E verificar se a ajuste do transformador está correto.\n2. É possível que uma desconexão momentânea da fonte de alimentação cause este alarme. Verificar se ocorreu uma desconexão momentânea.\n3. Modificar o programa a fim de que o robô e o eixo auxiliar não acelerem simultaneamente no sistema com o eixo auxiliar.\n4. Substituir a unidade de parada de emergência.\n5. Substituir o servo-amplificador.\n\n- Se este alarme ocorrer antes que o contator magnético seja ligado:\n\n### Ações a serem tomadas\n1. Verificar se o disjuntor na unidade de parada de emergência está desligado (OFF). Se estiver desligado (OFF), verificar o servo-amplificador e a fiação entre o servo-amplificador e a unidade de parada de emergência. Se algo estiver anormal, substituir. Além disso, ligar o disjuntor.\n2. Verificar se a voltagem de entrada para o controlador está dentro da voltagem nominal e que não esteja faltando alguma fase. E verificar se o ajuste do transformador está correto.\n3. Substituir a unidade de parada de emergência.\n4. Substituir o servo-amplificador.",
+      "paginas": "75"
+    },
+    {
+      "codigo": "SRVO-138",
+      "resposta": "### Explicação\nOs dados de feedback do codificador de pulso estavam anormais causados por ruído no codificador de pulso. Ou o circuito de interpolação do codificador de pulso está quebrado.\n\n### Ações a serem tomadas\n1. Se o alarme desaparecer desligando a força e em seguida religando, certificar-se de que as blindagens do cabo estejam aterradas.\n2. Se o problema ocorrer repetidamente, substituir o codificador de pulso e masterizar o robô.",
+      "paginas": "76"
+    },
+    {
+      "codigo": "SRVO-153",
+      "resposta": "### Explicação\nO circuito principal não poderia ser posto em carga dentro do tempo especificado.\n\n### Ações a serem tomadas\n1. Pode ocorrer um curto circuito na ligação CC. Verificar a conexão.\n2. O resistor de carga de controle da corrente pode estar defeituoso. Substituir a unidade de parada de emergência.\n3. Substituir o servo-amplificador.",
+      "paginas": "76"
+    },
+    {
+      "codigo": "SRVO-156",
+      "resposta": "### Explicação\nCorrente anormalmente alta fluiu através do circuito principal do servo-amplificador.\n\n### Ações a serem tomadas\n1. Desligar a força e desconectar o cabo de força do servo-amplificador indicado pela mensagem de alarme. (E desconectar o cabo do freio (CRR64 no servo-amplificador) para evitar que o eixo caia inesperadamente.) Suprir a força e ver se o alarme ocorre novamente. Se o alarme ocorrer de novo, substituir o servo-amplificador.\n2. Desligar a força e desconectar o cabo de força do servo-amplificador indicado pela mensagem de alarme e verificar a isolação de suas linhas U, V, W e GND umas com as outras. Se houver um curto-circuito, substituir o cabo de força.\n3. Desligar a força e desconectar o cabo de força do servo-amplificador pela mensagem de alarme e medir a resistência entre U e V, V e W e W e U com um ohmímetro com uma faixa de resistência muito baixa. Se as resistências nos três lugares forem diferentes umas das outras, o motor ou o cabo de força está com defeito. Verificar cada item em detalhe e substituir se necessário.",
+      "paginas": "77"
+    },
+    {
+      "codigo": "SRVO-194",
+      "resposta": "### Explicação\nNo bloco terminal TBOP3 da placa do painel, nenhuma conexão é feita entre 5 (SD4) e 6 (SD41) ou entre 7 (SD5) e 8 (SD51). Se uma chave de servo-desconexão for conectada entre 5 (SD4) e 6 (SD41) ou entre 7 (SD5) e 8 (SD51), a chave é pressionada. Se o alarme SYST-067 (de desconexão HSSB do painel) for também gerado ou se o LED (verde) na placa do painel estiver desligado, a comunicação entre a placa principal (JRS11) e a placa do painel (JRS11) será anormal. Os conectores do cabo entre a placa principal e a placa do painel podem estar soltos. Ou, o cabo, a placa do painel ou a placa principal pode estar com defeito.\n\n### Ações a serem tomadas\n**No caso em que o LED RDY (verde) esteja aceso:**\n1. Se estiver conectada uma chave de servo - desconexão, liberar a chave.\n2. Verificar a chave e o cabo conectado a 5 (SD4) – 6 (SD41), 7 (SD5) – 8 (SD51) em TBOP3.\n3. Quando não for usado o sinal, fazer uma conexão entre 5 (SD4) e 6 (SD41) ou 7 (SD5) e 8 (SD51).\n4. Substituir a placa do painel.\n\n**No caso em que o LED RDY (verde) não esteja aceso:**\n1. Verificar se FUSE1 na placa do painel está queimado. Se estiver, substituir FUSE1 depois de remover a causa. Além disso, verificar a voltagem de EXT24V e EXT0V (TBOP6). Se 24V, 0V externos não forem usados verificar os pinos em ponte entre EXT24V e INT24V, EXT0V e INT0V (TBOP6).\n2. Substituir a placa do painel.\n3. Substituir a conexão do cabo entre a placa principal (JRS11) e a placa do painel (JRS11).\n4. Antes de executar a Ação 4, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.",
+      "paginas": "78-79"
+    },
+    {
+      "codigo": "SRVO-199",
+      "resposta": "### Explicação\nEste alarme é exibido juntamente com um alarme de cerca aberta ou um alarme de entrada SVOFF.\n\n### Ações a serem tomadas\n(Nenhuma ação específica listada, apenas a explicação de que ocorre com outros alarmes.)",
+      "paginas": "79"
+    },
+    {
+      "codigo": "SRVO-201",
+      "resposta": "### Explicação\nO botão de PARADA DE EMERGÊNCIA no painel do operador/caixa de operação foi pressionado, mas a linha de PARADA DE EMERGÊNCIA não foi desconectada.\n\n### Ações a serem tomadas\n**No caso em que o LED RDY (verde) esteja aceso:**\n1. Não apertar lentamente o botão de parada de emergência no painel do operador/caixa de operação.\n2. Verificar a parada de emergência no painel do operador/caixa de operação. Se a chave tiver qualquer problema, substituir a unidade da chave ou o painel do operador/caixa de operação.\n3. Substituir a placa do painel.\n4. Substituir a unidade de parada de emergência.\n5. Substituir o servo-amplificador.\n\n**No caso em que o LED RDY (verde) não esteja aceso:**\n1. Substituir o cabo de ligação entre a placa principal (JRS11) e a placa do painel (JRS11).\n2. Substituir a placa do painel.\n3. Antes de executar a Ação 3, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.",
+      "paginas": "80-81"
+    },
+    {
+      "codigo": "SRVO-202",
+      "resposta": "### Explicação\nO botão de PARADA DE EMERGÊNCIA no terminal de programação foi apertado, mas a linha de PARADA DE EMERGÊNCIA não foi desconectada.\n\n### Ações a serem tomadas\n1. Não apertar lentamente a parada de emergência no terminal de programação.\n2. Substituir o terminal de programação.\n3. Substituir o cabo do terminal de programação.\n4. Substituir o painel do operador/caixa de operação.\n5. Substituir a unidade de parada de emergência.\n6. Substituir o servo-amplificador.",
+      "paginas": "82"
+    },
+    {
+      "codigo": "SRVO-204",
+      "resposta": "### Explicação\nFoi pressionada a chave conectada através de EES1 e EES11, EES2 e EES21 no bloco terminal TBOP4 na placa do painel, mas a linha de PARADA DE EMERGÊNCIA não foi desconectada.\n\n### Ações a serem tomadas\n**No caso em que o LED RDY (verde) esteja aceso:**\n1. Verificar a chave e o cabo conectado a 1 (EES1) – 2 (EES11), 3 (EES2) – 4 (EES21) no TBOP4.\n2. Substituir a placa do painel.\n3. Substituir a unidade de parada de emergência.\n4. Substituir o servo-amplificador.\n5. Substituir o cabo de conexão entre a unidade de parada de emergência e a placa do painel.\n\n**No caso em que o LED RDY (verde) não esteja aceso:**\n1. Substituir o cabo que se conecta entre a placa principal (JRS11) e a placa do painel (JRS11).\n2. Substituir a placa do painel.\n3. Antes de executar a Ação 3, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.",
+      "paginas": "83-85"
+    },
+    {
+      "codigo": "SRVO-205",
+      "resposta": "### Explicação\nA chave conectada através de EAS1 e EAS11, EAS2 e EAS21 no bloco terminal TBOP4 na placa do painel foi apertada, mas a linha de PARADA DE EMERGÊNCIA não foi desconectada.\n\n### Ações a serem tomadas\n**No caso em que o LED RDY (verde) esteja aceso:**\n1. Verificar a chave e o cabo conectado a 5 (EAS1) e 6 (EAS11) ou 7 (EAS2) e 8 (EAS21) em TBOP4.\n2. Substituir a placa do painel.\n3. Substituir a unidade de parada de emergência.\n4. Substituir o servo-amplificador.\n5. Substituir o cabo de conexão entre a unidade de parada de emergência e a placa do painel.\n\n**No caso em que o LED RDY (verde) não esteja aceso:**\n1. Substituir o cabo de conexão entre a placa principal (JRS11) e a placa do painel (JRS11).\n2. Substituir a placa do painel.\n3. Antes de executar a Ação 3, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.",
+      "paginas": "86-88"
+    },
+    {
+      "codigo": "SRVO-206",
+      "resposta": "### Explicação\nA chave de HOMEM MORTO foi liberada quando o terminal de programação estava operável, mas a linha de PARADA DE EMERGÊNCIA não foi desconectada.\n\n### Ações a serem tomadas\n1. Substituir o terminal de programação.\n2. Substituir o cabo do terminal de programação.\n3. Substituir o painel do operador/caixa de operação.\n4. Substituir a unidade de parada de emergência.\n5. Substituir o servo-amplificador.",
+      "paginas": "89"
+    },
+    {
+      "codigo": "SRVO-213",
+      "resposta": "### Explicação\nUm fusível na placa do painel queimou.\n\n### Ações a serem tomadas\n1. Verificar se FUSE1 na placa do painel está queimado. Se estiver substituir FUSE1 depois de remover a causa. Além disso, verificar a voltagem de EXT24V e EXT0V (TBOP6). Se 24V, 0V externos não forem usados verificar os pinos em ponte entre EXT24V e INT24V, EXT0V e INT0V (TBOP6).\n2. Substituir o cabo de conexão entre a placa principal (JRS11) e a placa do painel (JRS11).\n3. Substituir a placa do painel.\n4. Antes de executar a Ação 3, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.",
+      "paginas": "90-91"
+    },
+    {
+      "codigo": "SRVO-214",
+      "resposta": "### Explicação\nUm fusível no servo-amplificador queimou.\n\n### Ações a serem tomadas\n**No caso em que F1 ou F2 estiver queimado:**\n1. Substituir o servo-amplificador.\n\n**No caso em que F2 ou F3 estiver queimado:**\n1. Um fusível está queimado, eliminar a causa, em seguida substituir o fusível. (Ver II MANUTENÇÃO, seção 3.6.)\n2. Substituir o servo-amplificador.",
+      "paginas": "92"
+    },
+    {
+      "codigo": "SRVO-216",
+      "resposta": "### Explicação\nA corrente (corrente total para os seis eixos) que flui através do motor é alta demais.\n\n### Ações a serem tomadas\n1. Reduzir o movimento do robô onde for possível. Verificar as condições de operação do robô. Se o robô for usado em uma condição que exceda o serviço ou a carga nominal, reduzir o valor da condição de carga para a faixa de especificação.\n2. Verificar a se voltagem de entrada para o controlador está dentro da voltagem nominal e se nenhuma fase está faltando. E verificar se o ajuste do transformador está correto.\n3. Substituir o servo-amplificador.",
+      "paginas": "93"
+    },
+    {
+      "codigo": "SRVO-221",
+      "resposta": "### Explicação\nUm cartão de controle do eixo correspondente ao número configurado de eixos não está montado.\n\n### Ações a serem tomadas\n1. Verificar se o número configurado de eixos é válido. Se o número não for válido, configurá-lo para o número correto.\n2. Substituir o cartão de controle de eixo por um cartão correspondente ao número configurado de eixos. (Exemplo: Quando estão configurados seis eixos, está disponível um cartão de controle de eixo ara seis ou oito eixos. Para saber como substituir o cartão de controle de eixo, ver II MANUTENÇÃO, seção 7.2 neste manual.)",
+      "paginas": "93"
+    },
+    {
+      "codigo": "SRVO-230",
+      "resposta": "### Explicação\nOcorreu uma falha de canal único 1 (+24V) na parada de emergência do painel do operador/caixa de operação ou na parada de emergência do terminal de programação ou na chave de homem morto ou no interruptor da cerca ou na parada de emergência externa ou na servo-chave ON/OFF ou na entrada de dados no NTED ou no interruptor da porta. Favor verificar o histórico do alarme no registro de alarme. Falha de canal único é: Um dos canais de parada de emergência é condição de parada de emergência e um outro canal não é condição de parada de emergência. A causa deste alarme é: - Solda de contato - Fio cortado ou em curto - Meia liberação da chave de homem morto - Meia operação de parada de emergência do painel do operador/caixa de operação e parada de emergência do terminal de operação. - Entrada irregular de dados a partir da parada de emergência externa, etc. (Fora do controle de tempo especificado.) A falha de canal único ocorreu na chave de parada de emergência do painel do operador/caixa de operação, na chave de parada de emergência do terminal de programação e na chave de homem morto. Pode-se recuperar desta falha efetuando a operação correta de parada. O circuito de detecção para a falha de canal único é restaurado ou introduzindo uma outra causa de parada ou ligando a força novamente. Manter o estado de alarme na duração que está sendo verificada pelo histórico.\n\n### Ações a serem tomadas\n(Nenhuma ação específica listada para o SRVO-230/231 geral, mas há ações para combinações com outros alarmes.)",
+      "paginas": "93-95"
+    },
+    {
+      "codigo": "SRVO-231",
+      "resposta": "### Explicação\nOcorreu uma falha de canal único 2 (0V) na parada de emergência do painel do operador/caixa de operação ou na parada de emergência do terminal de programação ou na chave de homem morto ou no interruptor da cerca ou na parada de emergência externa ou na servo-chave ON/OFF ou na entrada de dados no NTED ou no interruptor da porta. Favor verificar o histórico do alarme no registro de alarme. Falha de canal único é: Um dos canais de parada de emergência é condição de parada de emergência e um outro canal não é condição de parada de emergência. A causa deste alarme é: - Solda de contato - Fio cortado ou em curto - Meia liberação da chave de homem morto - Meia operação de parada de emergência do painel do operador/caixa de operação e parada de emergência do terminal de operação. - Entrada irregular de dados a partir da parada de emergência externa, etc. (Fora do controle de tempo especificado.) A falha de canal único ocorreu na chave de parada de emergência do painel do operador/caixa de operação, na chave de parada de emergência do terminal de programação e na chave de homem morto. Pode-se recuperar desta falha efetuando a operação correta de parada. O circuito de detecção para a falha de canal único é restaurado ou introduzindo uma outra causa de parada ou ligando a força novamente. Manter o estado de alarme na duração que está sendo verificada pelo histórico.\n\n### Ações a serem tomadas\n(Nenhuma ação específica listada para o SRVO-230/231 geral, mas há ações para combinações com outros alarmes.)",
+      "paginas": "93-95"
+    },
+    {
+      "codigo": "SRVO-230 com SRVO-001",
+      "resposta": "### Explicação\nFalha de canal único 1 (+24V) anormal com Parada de emergência do painel do operador.\n\n### Ações a serem tomadas\n1. Re-operar a parada de emergência do painel do operador/caixa de operação. Se este alarme for restaurado, será exibida a mensagem “SRVO-236 A falha de canal está reparada”.\n2. Substituir a placa do painel.\n3. Substituir o painel do operador/caixa de operação.\n4. Substituir a unidade de parada de emergência.\n5. Substituir o servo-amplificador.\n6. Substituir o cabo de conexão entre a placa do painel e a unidade de parada de emergência (CRM64) ou entre a unidade de parada de emergência e o servo-amplificador (CRM67).",
+      "paginas": "96"
+    },
+    {
+      "codigo": "SRVO-231 com SRVO-001",
+      "resposta": "### Explicação\nFalha de canal único 2 (0V) anormal com Parada de emergência do painel do operador.\n\n### Ações a serem tomadas\n1. Re-operar a parada de emergência do painel do operador/caixa de operação. Se este alarme for restaurado, será exibida a mensagem “SRVO-236 A falha de canal está reparada”.\n2. Substituir a placa do painel.\n3. Substituir o painel do operador/caixa de operação.\n4. Substituir a unidade de parada de emergência.\n5. Substituir o servo-amplificador.\n6. Substituir o cabo de conexão entre a placa do painel e a unidade de parada de emergência (CRM64) ou entre a unidade de parada de emergência e o servo-amplificador (CRM67).",
+      "paginas": "96"
+    },
+    {
+      "codigo": "SRVO-230 com SRVO-002",
+      "resposta": "### Explicação\nFalha de canal único 1 (+24V) anormal com Parada de emergência do terminal de programação.\n\n### Ações a serem tomadas\n1. Re-operar a parada de emergência do terminal de programação. Se este alarme for restaurado, será exibida a mensagem de “SRVO-236 A falha de canal está reparada”.\n2. Substituir o terminal de programação.\n3. Substituir o cabo do terminal de programação.\n4. Substituir a placa do painel.\n5. Substituir a unidade de parada de emergência.\n6. Substituir o servo-amplificador.\n7. Substituir o cabo de conexão entre a placa do painel e a unidade de parada de emergência (CRM64) ou entre a unidade de parada de emergência e o servo-amplificador (CRM67).",
+      "paginas": "97"
+    },
+    {
+      "codigo": "SRVO-231 com SRVO-002",
+      "resposta": "### Explicação\nFalha de canal único 2 (0V) anormal com Parada de emergência do terminal de programação.\n\n### Ações a serem tomadas\n1. Re-operar a parada de emergência do terminal de programação. Se este alarme for restaurado, será exibida a mensagem de “SRVO-236 A falha de canal está reparada”.\n2. Substituir o terminal de programação.\n3. Substituir o cabo do terminal de programação.\n4. Substituir a placa do painel.\n5. Substituir a unidade de parada de emergência.\n6. Substituir o servo-amplificador.\n7. Substituir o cabo de conexão entre a placa do painel e a unidade de parada de emergência (CRM64) ou entre a unidade de parada de emergência e o servo-amplificador (CRM67).",
+      "paginas": "97"
+    },
+    {
+      "codigo": "SRVO-230 com SRVO-003",
+      "resposta": "### Explicação\nFalha de canal único 1 (+24V) anormal com Chave de homem morto liberada.\n\n### Ações a serem tomadas\n1. Re-operar a chave de homem morto. Se este alarme for restaurado, será exibida a mensagem de “SRVO-236 A falha de canal está reparada”.\n2. Substituir o terminal de programação.\n3. Substituir o cabo do terminal de programação.\n4. Substituir a placa do painel.\n5. Substituir a unidade de parada de emergência.\n6. Substituir o servo-amplificador.\n7. Substituir o cabo de conexão entre a placa do painel e a unidade de parada de emergência (CRM64) ou entre a unidade de parada de emergência e o servo-amplificador (CRM67).",
+      "paginas": "98"
+    },
+    {
+      "codigo": "SRVO-231 com SRVO-003",
+      "resposta": "### Explicação\nFalha de canal único 2 (0V) anormal com Chave de homem morto liberada.\n\n### Ações a serem tomadas\n1. Re-operar a chave de homem morto. Se este alarme for restaurado, será exibida a mensagem de “SRVO-236 A falha de canal está reparada”.\n2. Substituir o terminal de programação.\n3. Substituir o cabo do terminal de programação.\n4. Substituir a placa do painel.\n5. Substituir a unidade de parada de emergência.\n6. Substituir o servo-amplificador.\n7. Substituir o cabo de conexão entre a placa do painel e a unidade de parada de emergência (CRM64) ou entre a unidade de parada de emergência e o servo-amplificador (CRM67).",
+      "paginas": "98"
+    },
+    {
+      "codigo": "SRVO-240 com SRVO-230 e SRVO-004",
+      "resposta": "### Explicação\nCanal 1 (FENCE, cerca) anormal com Canal 1 (+24V) anormal e Cerca aberta.\n\n### Ações a serem tomadas\n1. Verificar a conexão de +24V da cerca de segurança (EAS1 – EAS11) ou a conexão de 0V da cerca de segurança (EAS2 – EAS21).\n2. Substituir a placa do painel.\n3. Substituir a unidade de parada de emergência.\n4. Substituir o servo-amplificador.\n5. Substituir a chave de modo.",
+      "paginas": "99-100"
+    },
+    {
+      "codigo": "SRVO-241 com SRVO-231 e SRVO-004",
+      "resposta": "### Explicação\nCanal 2 (FENCE, cerca) anormal com Canal 2 (0V) anormal e Cerca aberta.\n\n### Ações a serem tomadas\n1. Verificar a conexão de +24V da cerca de segurança (EAS1 – EAS11) ou a conexão de 0V da cerca de segurança (EAS2 – EAS21).\n2. Substituir a placa do painel.\n3. Substituir a unidade de parada de emergência.\n4. Substituir o servo-amplificador.\n5. Substituir a chave de modo.",
+      "paginas": "99-100"
+    },
+    {
+      "codigo": "SRVO-242 com SRVO-230 e SRVO-007",
+      "resposta": "### Explicação\nCanal 1 (EXEMG) anormal com Canal 1 (+24V) anormal e Paradas de emergência externas.\n\n### Ações a serem tomadas\n1. Verificar a conexão de +24V da parada de emergência externa (EES1 – EES11) ou a conexão de 0V da parada de emergência externa (EES2 – EES21).\n2. Substituir a placa do painel.\n3. Substituir a unidade de parada de emergência.\n4. Substituir o servo-amplificador.",
+      "paginas": "101-102"
+    },
+    {
+      "codigo": "SRVO-243 com SRVO-231 e SRVO-007",
+      "resposta": "### Explicação\nCanal 2 (EXEMG) anormal com Canal 2 (0V) anormal e Paradas de emergência externas.\n\n### Ações a serem tomadas\n1. Verificar a conexão de +24V da parada de emergência externa (EES1 – EES11) ou a conexão de 0V da parada de emergência externa (EES2 – EES21).\n2. Substituir a placa do painel.\n3. Substituir a unidade de parada de emergência.\n4. Substituir o servo-amplificador.",
+      "paginas": "101-102"
+    },
+    {
+      "codigo": "SRVO-230 com SRVO-232",
+      "resposta": "### Explicação\nCanal 1 (+24V) anormal com Entrada de dados no NTED.\n\n### Ações a serem tomadas\n1. Verificar a conexão de +24V da entrada de dados no NTED (NTED1 – NTED11) ou a conexão de 0V da entrada de dados no NTED (NTED2 – NTED21).\n2. Substituir a chave de modo.\n3. Substituir a placa do painel.\n4. Substituir a unidade de parada de emergência.\n5. Substituir o servo-amplificador.\n6. Substituir o cabo de conexão entre a placa do painel e a unidade de parada de emergência (CRM64) ou entre a unidade de parada de emergência e o servo-amplificador (CRM67).",
+      "paginas": "103"
+    },
+    {
+      "codigo": "SRVO-231 com SRVO-232",
+      "resposta": "### Explicação\nCanal 2 (0V) anormal com Entrada de dados no NTED.\n\n### Ações a serem tomadas\n1. Verificar a conexão de +24V da entrada de dados no NTED (NTED1 – NTED11) ou a conexão de 0V da entrada de dados no NTED (NTED2 – NTED21).\n2. Substituir a chave de modo.\n3. Substituir a placa do painel.\n4. Substituir a unidade de parada de emergência.\n5. Substituir o servo-amplificador.\n6. Substituir o cabo de conexão entre a placa do painel e a unidade de parada de emergência (CRM64) ou entre a unidade de parada de emergência e o servo-amplificador (CRM67).",
+      "paginas": "103"
+    },
+    {
+      "codigo": "SRVO-024",
+      "resposta": "### Explicação\nQuando o robô estiver funcionando, seu erro de posição é maior do que um valor especificado ($PARAM_GROUP.$MOVER_OFFST ou $PARAM_GROUP.$TRKERRLIM). É provável que o robô não possa seguir a velocidade especificada pelo programa.\n\n### Ações a serem tomadas\n1. Tomar a mesma ação que SRVO-23.",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-027",
+      "resposta": "### Explicação\nFoi feita uma tentativa de calibrar o robô, mas o ajuste necessário não tinha sido completado.\n\n### Ações a serem tomadas\n1. Masterizar o robô.",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-033",
+      "resposta": "### Explicação\nFoi feita uma tentativa de configurar um ponto de referência para ajuste simplificado, mas o robô não tinha sido calibrado.\n\n### Ações a serem tomadas\n1. Calibrar o robô.\n2. Fornecer energia.\n3. Configurar um ponto de referência de ajuste simplificado usando [Positioning] no menu de posicionamento.",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-034",
+      "resposta": "### Explicação\nFoi feita uma tentativa de efetuar ajuste simplificado, mas o ponto de referência não foi configurado.\n\n### Ações a serem tomadas\n1. Configurar um ponto de referência de ajuste simplificado no menu de posicionamento.",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-035",
+      "resposta": "### Explicação\nFoi especificado um valor mais alto do que a máxima velocidade do eixo ($PARAM_GROUP.$JNTVELLIM). Cada velocidade atual de eixo é fixada para a máxima velocidade.\n\n### Ações a serem tomadas\n(Nenhuma ação específica listada, apenas a explicação do comportamento.)",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-036",
+      "resposta": "### Explicação\nO robô não foi para a área efetiva ($PARAM_GROUP.$STOPTOL) mesmo depois que o tempo de monitoramento para verificar a posição ($PARAM_GROUP.$INPOS_TIME) expirou.\n\n### Ações a serem tomadas\n1. Tomar as mesmas ações que para SRVO-23 (erro grande de posição em uma parada).",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-037",
+      "resposta": "### Explicação\nFoi introduzido o sinal *IMSTP para uma interface de dispositivo periférico.\n\n### Ações a serem tomadas\n1. Ligar o sinal *IMSTP.",
+      "paginas": "46"
+    },
+    {
+      "codigo": "SRVO-038",
+      "resposta": "### Explicação\nA contagem de pulso obtida quando a força é desligada não combina com a contagem de pulso obtida quando a força é aplicada. Este alarme é reafirmado depois de mudar o codificador de pulso ou a bateria de segurança para os dados do codificador de pulso ou quando carregar os dados de backup na placa principal. Verificar o histórico de alarme.\n\n### Ações a serem tomadas\n1. No caso com “Falta de amperagem SRVO-222 (Amp: i)”, ver a localização de defeito de SRVO-222.\n2. Se o número do freio estiver configurado para os motores que não são do freio, pode ocorrer o alarme. Verificar a configuração do software do número do freio.\n3. No caso do robô ter sido movido usando a unidade de liberação do freio enquanto a força estiver desligada ou quando restaurar os dados de backup para a placa principal, pode ocorrer este alarme. Remasterizar o robô.\n4. Se o robô foi movido porque o freio falhou, pode ocorrer este alarme. Verificar a causa do problema com o freio. Em seguida remasterizar o robô.\n5. Substituir o codificador de pulso e masterizar o robô.",
+      "paginas": "47"
+    },
+    {
+      "codigo": "SRVO-042",
+      "resposta": "### Explicação\nEste alarme significa que os contatos do contator magnético colaram. A condição de alarme ocorre se o contator magnético se desligar para estar já ligado quando for feita uma tentativa de ligá-lo. A condição de alarme é detectada entre o tempo que ocorre a colagem do contato e o tempo em que é feita uma tentativa de ligar o contator magnético.\n\n### Ações a serem tomadas\n1. Verificar o contator magnético e substituí-lo se necessário. Se os contatos do contator magnético colarem uns nos outros, desligar o disjuntor. Se a força for desligada sem desligar o disjuntor, o servo-amplificador pode ser avariado, porque os contatos colados mantêm os 200V CA trifásicos aplicados ao servo-amplificador.\n2. Substituir a unidade de parada de emergência.\n3. Substituir o servo-amplificador.",
+      "paginas": "47-48"
+    },
+    {
+      "codigo": "SRVO-043",
+      "resposta": "### Explicação\nA energia de descarga regenerativa era alta demais para ser dissipada como calor. (Para fazer o robô funcionar, o servo-amplificador fornece energia ao robô. Ao fazer descer o eixo vertical, o robô opera a partir da energia potencial. Se uma redução na energia potencial for mais alta do que a energia necessária para a aceleração, o servo-amplificador recebe energia do motor. Um fenômeno similar ocorre mesmo quando nenhuma gravidade for aplicada, por exemplo, na desaceleração em um eixo horizontal. A energia que o servo-amplificador recebe do motor é chamada de energia regenerativa. O servo-amplificador dissipa esta energia como calor. Se a energia regenerativa for maior do que a energia dissipada como calor, a diferença é armazenada no servo-amplificador, causando um alarme.)\n\n### Ações a serem tomadas\n1. Este alarme pode ocorrer se o eixo estiver sujeito a freqüente aceleração/desaceleração ou se o eixo for vertical e gerar uma grande quantidade de energia regenerativa. Se ocorrer este alarme, moderar as condições de serviço.\n2. Verificar o fusível FS3 no servo-amplificador. Se ele estiver queimado, remover a causa e substituir o fusível. Uma das causas prováveis de um fusível queimado é uma falha de aterramento no servo-amplificador para o eixo auxiliar.\n3. A temperatura ambiente é excessivamente alta. Ou o resistor regenerativo não pode ser resfriado efetivamente. Verificar a unidade do ventilador e substituí-la se ela parar. Limpar a unidade do ventilador, o resistor regenerativo e a abertura de ventilação se estiverem sujos.\n4. Certificar-se de que os conectores do servo-amplificador CRR63A, CRR63B e CRR63C estejam firmemente conectados. Em seguida destacar o cabo dos conectores CRR63A, CRR63B e CRR63C da placa de parada de emergência e verificar quanto à continuidade entre os pinos 1 e 2 do conector da extremidade do cabo. Se não houver continuidade entre os pinos, substituir o resistor regenerativo.\n5. Certificar-se de que os conectores do servo-amplificador CRR45A, CRR45B e CRR45C estejam conectados firmemente, em seguida destacar os cabos de CRR45A, CRR45B e CRR45C do servo-amplificador e verificar a resistência entre os pinos 1 e 2 de cada conector da extremidade do cabo. Se a resistência não for de 9-16Ω, substituir o resistor regenerativo. CRR45B e CRR45C não podem ser usados dependendo do modelo do robô.\n6. Substituir o servo-amplificador.",
+      "paginas": "48-50"
+    },
+    {
+      "codigo": "SRVO-044",
+      "resposta": "### Explicação\nA voltagem de CC (voltagem de ligação em CC) da alimentação do circuito principal está anormalmente alta.\n\n### Ações a serem tomadas\n1. Verificar a voltagem trifásica de entrada no servo-amplificador. Se for de 240V CA ou mais alta, verificar a voltagem de linha. (Se a voltagem trifásica de entrada for mais alta do que 240V CA, a alta aceleração/desaceleração pode resultar neste alarme.)\n2. Verificar se o peso da carga está dentro do nominal. Se for mais alto do que o nominal, reduzi-lo para dentro do nominal. (Se a carga da máquina for mais alta do que a nominal, o acúmulo de energia regenerativa poderá resultar no alarme HVAL mesmo quando a voltagem trifásica de entrada estiver dentro da nominal.)\n3. Substituir o servo-amplificador.",
+      "paginas": "51"
+    },
+    {
+      "codigo": "SRVO-045",
+      "resposta": "### Explicação\nCorrente anormalmente alta fluiu no circuito principal do servo-amplificador.\n\n### Ações a serem tomadas\n1. Desligar a força e desconectar o cabo de força do servo-amplificador indicado pela mensagem de alarme. (E desconectar o cabo do freio (CRR64 no servo-amplificador) para evitar que o eixo caia inesperadamente.) Suprir a força para ver se o alarme ocorre novamente. Se ocorrer de novo o alarme, substituir o servo-amplificador.\n2. Desligar a força e desconectar o cabo de força do servo-amplificador indicado pela mensagem de alarme e verificar o isolamento de suas linhas U, V, W e GND (terra) umas com as outras. Se houver um curto-circuito, substituir o cabo de força.\n3. Desligar a força e desconectar o cabo de força do servo-amplificador pela mensagem de alarme e medir a resistência entre U e V, V e W e W e U com um ohmímetro que tenha uma faixa de resistência muito baixa. Se as resistências nos três locais forem diferentes uns dos outros, o motor ou o cabo de força está defeituoso. Verificar cada item em detalhe e substituir se necessário.",
+      "paginas": "52"
+    },
+    {
+      "codigo": "SRVO-046",
+      "resposta": "### Explicação\nEste alarme é emitido para evitar que o motor sofra avaria térmica que possa ocorrer quando o valor médio quadrático calculado da corrente dentro do servo-sistema estiver fora da faixa admissível.\n\n### Ações a serem tomadas\n1. Verificar a condição de operação para o robô e moderar a condição de serviço se possível.\n2. Tomar as mesmas ações de SRVO-023.",
+      "paginas": "53"
+    },
+    {
+      "codigo": "SRVO-047",
+      "resposta": "### Explicação\nA voltagem de alimentação do controle (+5V, etc.) fornecida pelo circuito de alimentação no servo-amplificador é anormalmente baixa.\n\n### Ações a serem tomadas\n1. Substituir o servo-amplificador de acordo com a mensagem do alarme.\n2. Substituir a fonte de alimentação.",
+      "paginas": "56"
+    },
+    {
+      "codigo": "SRVO-049",
+      "resposta": "### Explicação\nO termostato no transformador funcionou. Alternativamente, o fusível F1 ou F2 no servo-amplificador queimou.\n\n### Ações a serem tomadas\n1. Verificar a condição de operação para o robô e moderar a condição de trabalho se possível. E verificar a unidade do ventilador e substituí-la se parar. Limpar a unidade do ventilador, o resistor regenerativo e a abertura de ventilação se estiverem sujos.\n2. Verificar fusível queimado (Amp) SRVO-214 que ocorre simultaneamente no histórico de alarme. Se ocorrer, substituir o servo-amplificador. Substituir os fusíveis F1 e F2 no servo-amplificador não resolve o problema.\n3. Certificar-se de que o conector CRM73 na unidade de parada de emergência e o conector TOH no transformador estejam firmemente conectados.\n4. Substituir o servo.\n5. Substituir o transformador.",
+      "paginas": "57-58"
+    },
+    {
+      "codigo": "SRVO-050",
+      "resposta": "### Explicação\nO torque de interferência estimado pelo servo-software é anormalmente alto. (Foi detectada uma colisão.)\n\n### Ações a serem tomadas\n1. Verificar a configuração do software para esta opção.\n2. Tomar as mesmas ações que SRVO-023.",
+      "paginas": "59"
+    },
+    {
+      "codigo": "SRVO-051",
+      "resposta": "### Explicação\nA compensação do valor de feedback da corrente é anormalmente alta.\n\n### Ações a serem tomadas\n1. Substituir o servo-amplificador.",
+      "paginas": "60"
+    },
+    {
+      "codigo": "SRVO-054",
+      "resposta": "### Explicação\nUm acesso ao servo-módulo de memória falha.\n\n### Ações a serem tomadas\n1. Substituir o cartão de controle de eixo na placa principal.",
+      "paginas": "61"
+    },
+    {
+      "codigo": "SRVO-055",
+      "resposta": "### Explicação\nOcorreu um erro de comunicação entre a placa principal e o servo-amplificador.\n\n### Ações a serem tomadas\n1. Verificar o cabo de comunicação (fibra óptica) entre a placa principal e o servo-amplificador. Substituí-lo se estiver defeituoso.\n2. Substituir o cartão de controle de eixo na placa principal.\n3. Substituir o servo-amplificador.",
+      "paginas": "62"
+    },
+    {
+      "codigo": "SRVO-056",
+      "resposta": "### Explicação\nOcorreu um erro de comunicação entre a placa principal e o servo-amplificador.\n\n### Ações a serem tomadas\n1. Tomar a mesma ação de SRVO-055.",
+      "paginas": "63"
+    },
+    {
+      "codigo": "SRVO-057",
+      "resposta": "### Explicação\nA comunicação entre a placa principal e o servo-amplificador foi interrompida.\n\n### Ações a serem tomadas\n1. Verificar se o fusível F3 na fonte de alimentação queimou.\n2. Verificar se o fusível FS1 no servo-amplificador queimou.\n3. Verificar o cabo de comunicação (fibra óptica) entre a placa principal e o servo-amplificador. Substituí-lo se estiver defeituoso.\n4. Substituir o cartão de controle de eixo na placa principal.\n5. Substituir o servo-amplificador.\n6. Verificar o cabo RP1 de conexão do robô (defeito de aterramento +5V).\n7. Antes de executar a Ação 7, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.",
+      "paginas": "63"
+    },
+    {
+      "codigo": "SRVO-058",
+      "resposta": "### Explicação\nA comunicação entre a placa principal e o servo-amplificador foi interrompida.\n\n### Ações a serem tomadas\n1. Verificar se o fusível F3 na fonte de alimentação queimou.\n2. Desligar a força e desconectar o conector CRF7 no servo-amplificador. Em seguida ligar a força e verificar se este alarme ocorre de novo. (Ignorar o alarme SRVO-068 devido à desconexão do conector CRF7.) Se este alarme não ocorrer, o cabo RP1 de conexão do robô ou o cabo interno do robô pode estar em curto-circuito com a terra. Verificar os cabos e substituí-los se necessário.\n3. Verificar se os LEDs (P5V e P3,3V) no servo-amplificador estão acesos. Se eles não estiverem acesos, não está sendo fornecido suprimento de força em CC ao servo-amplificador. Certificar-se de que os conectores CP6 e CRM67 na unidade de parada de emergência e o conector CRM67 no servo-amplificador estão firmemente conectados. Se eles estiverem conectados firmemente, substituir o servo-amplificador.\n4. Verificar o cabo de comunicação (fibra óptica) entre a placa principal e o servo-amplificador. Substituí-lo se estiver com defeito.\n5. Substituir o cartão de controle de eixo na placa principal.\n6. Substituir o servo-amplificador.\n7. Se as outras unidades (o servo-amplificador para o eixo auxiliar e a interface de rastreamento de linha) estiverem conectadas na comunicação óptica FSSB, desconectar estas unidades e conectar somente o servo-amplificador do canal 6 ao robô. Em seguida ligar a força. Se não ocorrer este alarme, procurar a unidade defeituosa e substituí-la.\n8. Antes de continuar para o próximo passo, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Deixar de efetuar isto poderá resultar em dano ao equipamento ou perda de dados. Substituir a placa principal.",
+      "paginas": "64-65"
+    },
+    {
+      "codigo": "SRVO-059",
+      "resposta": "### Explicação\nA inicialização do servo-amplificador falhou.\n\n### Ações a serem tomadas\n1. Verificar o cabo de comunicação (fibra óptica) entre a placa principal e o servo-amplificador. Substituí-lo se estiver com defeito.\n2. Substituir o servo-amplificador.",
+      "paginas": "66"
+    },
+    {
+      "codigo": "SRVO-060",
+      "resposta": "### Explicação\nA comunicação entre a placa do eixo adicional e o amplificador do eixo adicional foi interrompida.\n\n### Ações a serem tomadas\n1. Verificar se o cabo óptico entre a placa do eixo adicional e o amplificador do eixo adicional está firmemente conectado.\n2. Substituir a placa do eixo adicional.\n3. Substituir o amplificador do eixo adicional.\n4. Antes de executar a Ação 4, efetuar um backup completo do controlador para salvar todos os seus programas e configurações. Substituir a placa principal.\n5. Substituir o backplane.",
+      "paginas": "66"
+    },
+    {
+      "codigo": "SRVO-062",
+      "resposta": "### Explicação\nEste alarme ocorrerá se a bateria de segurança de posição absoluta do codificador de pulso estiver vazia. A causa provável é um cabo de bateria quebrado ou sem bateria no robô.\n\n### Ações a serem tomadas\n1. Verificar a bateria ou o cabo da bateria e substituir a bateria. Em seguida ajustar a variável do sistema $MCR.$SPC_RESET para TRUE (verdadeiro) e suprir a força novamente. Depois disso, masterizar o robô ou seguir o PROCEDIMENTO DE RECUPERAÇÃO SRVO-038.",
+      "paginas": "67"
+    },
+    {
+      "codigo": "SRVO-064",
+      "resposta": "### Explicação\nEste alarme ocorrerá se a fase dos pulsos gerados no codificador de pulso for anormal.\n\n### Ações a serem tomadas\n1. Substituir o codificador de pulso.",
+      "paginas": "67"
+    },
+    {
+      "codigo": "SRVO-065",
+      "resposta": "### Explicação\nA voltagem da bateria para o codificador de pulso é mais baixa do que a nominal.\n\n### Ações a serem tomadas\n1. Substituir a bateria. (Se ocorrer este alarme, desligar a força CA e substituir a bateria logo que possível. Uma demora na substituição da bateria pode resultar que seja detectado pelo alarme BZAL. Neste caso, os dados de posição serão perdidos. Uma vez perdidos os dados de posição, a masterização se tornará necessária.)",
+      "paginas": "67"
+    },
+    {
+      "codigo": "SRVO-067",
+      "resposta": "### Explicação\nA temperatura dentro do codificador de pulso ou do motor está anormalmente alta e o termostato montado operou.\n\n### Ações a serem tomadas\n1. Verificar as condições de operação para o robô e moderar as condições de trabalho.\n2. Quando for fornecida energia ao motor depois de ele ficar suficientemente frio, se ainda ocorrer o alarme, substituir o motor.",
+      "paginas": "67"
+    },
+    {
+      "codigo": "SRVO-068",
+      "resposta": "### Explicação\nO codificador de pulso não retorna os dados em série em resposta a um sinal de solicitação.\n\n### Ações a serem tomadas\n1. Ver ações em SRVO-070.",
+      "paginas": "67"
+    },
+    {
+      "codigo": "SRVO-069",
+      "resposta": "### Explicação\nOs dados em série se desarranjam durante a comunicação.\n\n### Ações a serem tomadas\n1. Ver ações em SRVO-070.",
+      "paginas": "68"
+    },
+    {
+      "codigo": "SRVO-070",
+      "resposta": "### Explicação\nOs bits de partida e parada dos dados em série estão anormais.\n\n### Ações a serem tomadas\n1. Certificar-se de que o conector CRF7 no servo-amplificador está firmemente conectado.\n2. Verificar se a blindagem do cabo de interconexão do robô (para o codificador de pulso) e o cabo do equipamento periférico estão conectados firmemente à chapa de aterramento.\n3. Verificar se cada unidade está firmemente aterrada.\n4. Substituir o servo-amplificador.\n5. Substituir o codificador de pulso.\n6. Substituir o cabo de interconexão do robô (para o codificador de pulso).",
+      "paginas": "68"
+    },
+    {
+      "codigo": "SRVO-071",
+      "resposta": "### Explicação\nA velocidade de feedback está anormalmente alta.\n\n### Ações a serem tomadas\n1. Se este alarme ocorrer juntamente com o alarme PHAL (SRVO-064), este alarme não corresponderá à causa principal da falha.\n2. Substituir o codificador de pulso.",
+      "paginas": "68"
+    },
+    {
+      "codigo": "SRVO-072",
+      "resposta": "### Explicação\nÉ provável que o codificador de pulso esteja anormal.\n\n### Ações a serem tomadas\n1. Substituir o codificador de pulso e remasterizar o robô.",
+      "paginas": "69"
+    },
+    {
+      "codigo": "SRVO-073",
+      "resposta": "### Explicação\nÉ provável que o codificador de pulso esteja anormal ou o codificador de pulso funcionou mal devido ao ruído.\n\n### Ações a serem tomadas\n1. Reforçar a terra do flange do motor de acordo com a mensagem do alarme.\n2. Substituir o codificador de pulso e masterizar o robô.",
+      "paginas": "69"
+    },
+    {
+      "codigo": "SRVO-074",
+      "resposta": "### Explicação\nO LED no codificador de pulso está quebrado.\n\n### Ações a serem tomadas\n1. Substituir o codificador de pulso e remasterizar o robô.",
+      "paginas": "69"
+    },
+    {
+      "codigo": "SRVO-075",
+      "resposta": "### Explicação\nA posição absoluta do codificador de pulso não pode ser estabelecida.\n\n### Ações a serem tomadas\n1. Restaurar o alarme e movimentar manualmente o eixo no qual o alarme ocorreu até que o mesmo não ocorra de novo. (Movimentar manualmente de uma rotação do motor.)",
+      "paginas": "69"
+    },
+    {
+      "codigo": "SRVO-076",
+      "resposta": "### Explicação\nUm excessivo transtorno foi assumido no servo-software no início da operação. (Foi detectada uma carga anormal.)\n\n### Ações a serem tomadas\n1. Verificar se o robô colidiu com algum corpo estranho. Se ocorrer uma colisão, restaurar o sistema, em seguida mover manualmente o robô para evitar a colisão. Ou verificar se a carga de máquina do eixo correspondente aumentou.\n2. Verificar se são válidas as configurações de carga.\n3. Verificar se o freio do eixo correspondente está liberado.\n4. Verificar se o peso da carga está dentro da faixa nominal. Se o peso exceder o limite superior, reduzi-lo para o limite. (O uso do robô com uma carga excedendo o limite aplicado pode aumentar anormalmente o transtorno assumido, resultando neste alarme.)\n5. Verificar cada voltagem entre fases da entrada trifásica (200V CA) ao servo-amplificador. E verificar o ajuste do transformador.\n6. Substituir o servo-amplificador.\n7. Substituir o servo-motor correspondente.\n8. Substituir a unidade de parada de emergência.\n9. Substituir o cabo de força do cabo de conexão do robô no qual o eixo correspondente está conectado.\n10. Substituir o cabo de força de interconexão do robô no qual o eixo correspondente está conectado.",
+      "paginas": "70"
+    },
+    {
+      "codigo": "SRVO-081",
+      "resposta": "### Explicação\nO contador de pulso para rastreamento de linha estourou a capacidade.\n\n### Ações a serem tomadas\n1. Verificar se a condição do rastreamento de linha excede a limitação.\n2. Substituir o codificador de pulso.\n3. Substituir a placa I/F de rastreamento de linha.",
+      "paginas": "71"
+    },
+    {
+      "codigo": "SRVO-082",
+      "resposta": "### Explicação\nO codificador de pulso de rastreamento de linha não foi conectado.\n\n### Ações a serem tomadas\n1. Verificar o cabo de conexão em cada extremidade (a placa I/F de rastreamento de linha e o codificador de pulso).\n2. Verificar se a blindagem do cabo de conexão está firmemente conectada à chapa de aterramento.\n3. Substituir o cabo de rastreamento de linha.\n4. Substituir o codificador de pulso.\n5. Substituir a placa I/F de rastreamento de linha.",
+      "paginas": "71"
+    },
+    {
+      "codigo": "SRVO-084",
+      "resposta": "### Explicação\nEste alarme ocorrerá se a bateria de segurança para a posição absoluta do codificador de pulso não for conectada. Ver a descrição do alarme BZAL (SRVO-062).\n\n### Ações a serem tomadas\n1. Verificar a bateria e o cabo da bateria e substituir a bateria. Em seguida ajustar a variável do sistema $MCR.$SPC_RESET para TRUE (verdadeiro) e suprir a força novamente. Depois disto, masterizar o codificador de pulso.",
+      "paginas": "71"
+    },
+    {
+      "codigo": "SRVO-087",
+      "resposta": "### Explicação\nEste alarme ocorrerá se a voltagem da bateria de segurança para a posição absoluta do codificador de pulso for baixa. Ver a descrição do alarme BLAL (SRVO-065).\n\n### Ações a serem tomadas\n1. Substituir a bateria. (Se ocorrer este alarme, ligar a alimentação CA e substituir a bateria logo que possível. Uma demora na substituição da bateria poderá resultar na detecção do alarme BZAL. Neste caso, os dados de posição serão perdidos. Uma vez perdidos os dados de posição, a masterização se tornará necessária.)",
+      "paginas": "71"
+    },
+    {
+      "codigo": "SRVO-089",
+      "resposta": "### Explicação\nO motor se sobre-aqueceu. Ver a descrição do alarme OHAL2 (SRVO-067).\n\n### Ações a serem tomadas\n1. Verificar as condições de operação para o codificador de pulso.\n2. Quando for suprida força para o codificador de pulso depois que ele se tornou suficientemente frio, se ainda ocorrer o alarme, substituir o codificador de pulso.",
+      "paginas": "72"
+    },
+    {
+      "codigo": "SRVO-091",
+      "resposta": "### Explicação\nA comunicação entre o codificador de pulso e a placa de interface de rastreamento de linha está anormal. Ver a descrição do alarme CRCERR (SRVO-092).\n\n### Ações a serem tomadas\n(Nenhuma ação específica listada, apenas a referência a SRVO-092.)",
+      "paginas": "72"
+    },
+    {
+      "codigo": "SRVO-092",
+      "resposta": "### Explicação\nA comunicação entre o codificador de pulso e a placa de interface de rastreamento de linha está anormal.\n\n### Ações a serem tomadas\n1. Verificar o cabo de conexão em cada extremidade (a placa I/F de rastreamento de linha e o codificador de pulso).\n2. Verificar se a blindagem do cabo de conexão está firmemente conectada à chapa de aterramento.\n3. Substituir o cabo de rastreamento de linha.\n4. Substituir o codificador de pulso.\n5. Substituir a placa I/F de rastreamento de linha.",
+      "paginas": "72"
+    },
+    {
+      "codigo": "SRVO-093",
+      "resposta": "### Explicação\nEste alarme ocorrerá se os dados de posição correntes do codificador de pulso forem mais altos do que os dados da posição anterior.\n\n### Ações a serem tomadas\n1. Se ocorrer este alarme juntamente com o alarme PHAL (SRVO-086), este alarme não corresponderá à causa principal da falha.\n2. Substituir o codificador de pulso.\n3. Verificar o cabo de conexão em cada extremidade (a placa I/F de rastreamento de linha e o codificador de pulso).\n4. Verificar se a blindagem do cabo de conexão está conectada firmemente à chapa de aterramento.\n5. Substituir o cabo de rastreamento de linha.\n6. Substituir o codificador de pulso.\n7. Substituir a placa I/F de rastreamento de linha.",
+      "paginas": "72"
+    },
+    {
+      "codigo": "SRVO-094",
+      "resposta": "### Explicação\nÉ provável que o codificador de pulso esteja anormal.\n\n### Ações a serem tomadas\n1. Substituir o codificador de pulso.",
+      "paginas": "72"
+    },
+    {
+      "codigo": "SRVO-095",
+      "resposta": "### Explicação\nÉ provável que o codificador de pulso esteja anormal ou o codificador de pulso funcione mal devido ao ruído.\n\n### Ações a serem tomadas\n1. Reforçar o aterramento do flange do motor de acordo com a mensagem de alarme.\n2. Substituir o codificador de pulso e masterizar o robô.",
+      "paginas": "73"
+    },
+    {
+      "codigo": "SRVO-096",
+      "resposta": "### Explicação\nO LED no codificador de pulso está quebrado.\n\n### Ações a serem tomadas\n1. Substituir o codificador de pulso.",
+      "paginas": "73"
+    },
+    {
+      "codigo": "SRVO-097",
+      "resposta": "### Explicação\nA posição absoluta do codificador de pulso não pode ser estabelecida.\n\n### Ações a serem tomadas\n1. Restaurar o alarme e mover manualmente o eixo no qual o alarme ocorreu até que o mesmo não ocorra de novo. (Mover manualmente uma rotação do motor.)",
+      "paginas": "73"
+    },
+    {
+      "codigo": "SRVO-105",
+      "resposta": "### Explicação\nA porta do gabinete está aberta.\n\n### Ações a serem tomadas\n1. Quando a porta estiver aberta, fechá-la. Se não houver interruptor montado na porta, ir para (Ação 3).\n2. Verificar o interruptor da porta e o cabo de conexão do interruptor da porta. Se o interruptor ou o cabo estiver com defeito, substituí-lo.\n3. Verificar se os conectores CRM67, CRM70 e CRM71 na unidade de parada de emergência estão firmemente conectados.\n4. Substituir o terminal de programação.\n5. Substituir o cabo do terminal de programação.\n6. Substituir a chave de modo no painel do operador /caixa de operação. Ou substituir o painel do operador/caixa de operação.\n7. Substituir a unidade comutadora do painel no painel do operador/caixa de operação. Ou substituir o painel do operador/caixa de operação.\n8. Substituir a placa do painel.\n9. Substituir a unidade de parada de emergência.\n10. Substituir o servo-amplificador.\n11. Substituir o cabo de conexão entre a placa do painel e a unidade de parada de emergência.",
+      "paginas": "74"
+    }
+  ]
